@@ -1,0 +1,33 @@
+.head-text {
+	width: 100%;
+	color: white;
+	background-color: #336b87;
+	text-transform: uppercase;
+	font-size: 40px;
+	text-align: center;
+	line-height: 150px;
+}
+
+
+.container {
+	padding: 50px 0;
+}
+
+.card-img-top {
+	width: 100%;
+}
+
+.row {
+	display: flex; 
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.card-text {
+	text-align: center;
+	color: #2A3132;
+}
+
+a:hover {
+	text-decoration: none;
+}

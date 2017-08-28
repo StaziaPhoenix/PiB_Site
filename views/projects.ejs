@@ -1,5 +1,32 @@
 <% include partials/header %>
+<link rel="stylesheet" type="text/css" href="/css/projects.css">
 
-<h1>projects page</h1>
+<div class="head">
+	<div class="head-text">
+		Projects
+	</div>
+</div>
+
+<div class="container">
+
+	<div class="row">
+
+		<% projects.forEach(function(project) { %>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+				<a href="/projects/<%= project.page %>">
+				<div class="card card-outline-primary">
+					<img class="card-img-top" src="<%= project.mainImage %>" alt="project image">
+					<div class="card-block">
+						 <h4 class="card-text"><%= project.title %> </h4>
+						 <p class="card-text"><%= project.description %></p>
+					</div>
+				</div>
+				</a>
+			</div>
+		<% }); %>
+
+	</div> <!-- class = row -->
+
+</div>
 
 <% include partials/footer %>
