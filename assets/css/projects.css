@@ -1,4 +1,4 @@
-.head-text {
+/*.head-text {
 	width: 100%;
 	color: white;
 	background-color: #336b87;
@@ -6,21 +6,25 @@
 	font-size: 40px;
 	text-align: center;
 	line-height: 150px;
-}
-
+}*/
 
 .container {
 	padding: 50px 0;
+	display: flex;
+	flex-wrap: wrap;
+	/*justify-content: space-around;*/
+}
+
+.card {
+	width: 250px;
+	margin: 15px;
+	/*height: 300px;*/
 }
 
 .card-img-top {
 	width: 100%;
-}
-
-.row {
-	display: flex; 
-	flex-wrap: wrap;
-	align-items: center;
+	height: 200px;
+	object-fit: cover;
 }
 
 .card-text {
@@ -28,6 +32,15 @@
 	color: #2A3132;
 }
 
+.card-title {
+	text-align: center;
+	color: #2A3132;
+}
+
 a:hover {
 	text-decoration: none;
+}
+
+button {
+	text-align: center;
 }

@@ -1,3 +1,23 @@
+.head {
+	position: relative;
+	height: 325px;
+	background-image: url("/images/lightbulb.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+}
+
+.head-text {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-color: rgba(255,255,255,.8);
+	text-transform: uppercase;
+	font-size: 40px;
+	text-align: center;
+	line-height: 150px;
+}
+
 .btn-primary {
 	background-color: #336b87;
 }

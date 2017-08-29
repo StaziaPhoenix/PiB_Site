@@ -10,111 +10,120 @@ var projects = [
 						page: "binaryclock",
 						mainImage: "/images/clockMain.JPG",
 						images: ["/images/clock1.jpg", "/images/clock2.jpg"],
-						description: "Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus."
+						hook: "Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus.",
+						description: "Maecenas et neque fermentum, euismod dolor in, porttitor justo. Curabitur metus diam, laoreet vel nisi sed, pharetra viverra enim. Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus. Suspendisse malesuada congue sodales. In hac habitasse platea dictumst. Suspendisse mollis facilisis neque quis dignissim. Nullam libero turpis, commodo at elementum a, volutpat ut odio."
 					},
 					{
 						title: "Programmable Heart",
 						page: "programmableheart",
 						mainImage: "/images/heartMain.jpg",
 						images: ["/images/heart1.jpg"],
-						description: "In hac habitasse platea dictumst."
+						hook: "In hac habitasse platea dictumst.",
+						description: "Maecenas et neque fermentum, euismod dolor in, porttitor justo. Curabitur metus diam, laoreet vel nisi sed, pharetra viverra enim. Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus. Suspendisse malesuada congue sodales. In hac habitasse platea dictumst. Suspendisse mollis facilisis neque quis dignissim. Nullam libero turpis, commodo at elementum a, volutpat ut odio."						
 					},
 					{
 						title: "ATTiny Programmer",
 						page: "attinyprogrammer",
 						mainImage: "/images/attinyMain.jpg",
 						images: ["/images/attiny1.jpg"],
-						description: "Suspendisse malesuada congue sodales."
+						hook: "Suspendisse malesuada congue sodales.",
+						description: "Maecenas et neque fermentum, euismod dolor in, porttitor justo. Curabitur metus diam, laoreet vel nisi sed, pharetra viverra enim. Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus. Suspendisse malesuada congue sodales. In hac habitasse platea dictumst. Suspendisse mollis facilisis neque quis dignissim. Nullam libero turpis, commodo at elementum a, volutpat ut odio."
 					},
 					{
 						title: "Binary Clock",
+						page: "binaryclock",
 						mainImage: "/images/clockMain.JPG",
 						images: ["/images/clock1.jpg", "/images/clock2.jpg"],
-						description: "Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus."
+						hook: "Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus.",
+						description: "Maecenas et neque fermentum, euismod dolor in, porttitor justo. Curabitur metus diam, laoreet vel nisi sed, pharetra viverra enim. Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus. Suspendisse malesuada congue sodales. In hac habitasse platea dictumst. Suspendisse mollis facilisis neque quis dignissim. Nullam libero turpis, commodo at elementum a, volutpat ut odio."
 					},
 					{
 						title: "Programmable Heart",
+						page: "programmableheart",
 						mainImage: "/images/heartMain.jpg",
 						images: ["/images/heart1.jpg"],
-						description: "In hac habitasse platea dictumst."
+						hook: "In hac habitasse platea dictumst.",
+						description: "Maecenas et neque fermentum, euismod dolor in, porttitor justo. Curabitur metus diam, laoreet vel nisi sed, pharetra viverra enim. Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus. Suspendisse malesuada congue sodales. In hac habitasse platea dictumst. Suspendisse mollis facilisis neque quis dignissim. Nullam libero turpis, commodo at elementum a, volutpat ut odio."						
 					},
 					{
 						title: "ATTiny Programmer",
+						page: "attinyprogrammer",
 						mainImage: "/images/attinyMain.jpg",
 						images: ["/images/attiny1.jpg"],
-						description: "Suspendisse malesuada congue sodales."
+						hook: "Suspendisse malesuada congue sodales.",
+						description: "Maecenas et neque fermentum, euismod dolor in, porttitor justo. Curabitur metus diam, laoreet vel nisi sed, pharetra viverra enim. Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus. Suspendisse malesuada congue sodales. In hac habitasse platea dictumst. Suspendisse mollis facilisis neque quis dignissim. Nullam libero turpis, commodo at elementum a, volutpat ut odio."
 					},
 					{
 						title: "Binary Clock",
+						page: "binaryclock",
 						mainImage: "/images/clockMain.JPG",
 						images: ["/images/clock1.jpg", "/images/clock2.jpg"],
-						description: "Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus."
+						hook: "Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus.",
+						description: "Maecenas et neque fermentum, euismod dolor in, porttitor justo. Curabitur metus diam, laoreet vel nisi sed, pharetra viverra enim. Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus. Suspendisse malesuada congue sodales. In hac habitasse platea dictumst. Suspendisse mollis facilisis neque quis dignissim. Nullam libero turpis, commodo at elementum a, volutpat ut odio."
 					},
 					{
 						title: "Programmable Heart",
+						page: "programmableheart",
 						mainImage: "/images/heartMain.jpg",
 						images: ["/images/heart1.jpg"],
-						description: "In hac habitasse platea dictumst."
+						hook: "In hac habitasse platea dictumst.",
+						description: "Maecenas et neque fermentum, euismod dolor in, porttitor justo. Curabitur metus diam, laoreet vel nisi sed, pharetra viverra enim. Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus. Suspendisse malesuada congue sodales. In hac habitasse platea dictumst. Suspendisse mollis facilisis neque quis dignissim. Nullam libero turpis, commodo at elementum a, volutpat ut odio."						
 					},
 					{
 						title: "ATTiny Programmer",
+						page: "attinyprogrammer",
 						mainImage: "/images/attinyMain.jpg",
 						images: ["/images/attiny1.jpg"],
-						description: "Suspendisse malesuada congue sodales."
+						hook: "Suspendisse malesuada congue sodales.",
+						description: "Maecenas et neque fermentum, euismod dolor in, porttitor justo. Curabitur metus diam, laoreet vel nisi sed, pharetra viverra enim. Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus. Suspendisse malesuada congue sodales. In hac habitasse platea dictumst. Suspendisse mollis facilisis neque quis dignissim. Nullam libero turpis, commodo at elementum a, volutpat ut odio."
 					},
 					{
 						title: "Binary Clock",
+						page: "binaryclock",
 						mainImage: "/images/clockMain.JPG",
 						images: ["/images/clock1.jpg", "/images/clock2.jpg"],
-						description: "Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus."
+						hook: "Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus.",
+						description: "Maecenas et neque fermentum, euismod dolor in, porttitor justo. Curabitur metus diam, laoreet vel nisi sed, pharetra viverra enim. Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus. Suspendisse malesuada congue sodales. In hac habitasse platea dictumst. Suspendisse mollis facilisis neque quis dignissim. Nullam libero turpis, commodo at elementum a, volutpat ut odio."
 					},
 					{
 						title: "Programmable Heart",
+						page: "programmableheart",
 						mainImage: "/images/heartMain.jpg",
 						images: ["/images/heart1.jpg"],
-						description: "In hac habitasse platea dictumst."
+						hook: "In hac habitasse platea dictumst.",
+						description: "Maecenas et neque fermentum, euismod dolor in, porttitor justo. Curabitur metus diam, laoreet vel nisi sed, pharetra viverra enim. Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus. Suspendisse malesuada congue sodales. In hac habitasse platea dictumst. Suspendisse mollis facilisis neque quis dignissim. Nullam libero turpis, commodo at elementum a, volutpat ut odio."						
 					},
 					{
 						title: "ATTiny Programmer",
+						page: "attinyprogrammer",
 						mainImage: "/images/attinyMain.jpg",
 						images: ["/images/attiny1.jpg"],
-						description: "Suspendisse malesuada congue sodales."
+						hook: "Suspendisse malesuada congue sodales.",
+						description: "Maecenas et neque fermentum, euismod dolor in, porttitor justo. Curabitur metus diam, laoreet vel nisi sed, pharetra viverra enim. Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus. Suspendisse malesuada congue sodales. In hac habitasse platea dictumst. Suspendisse mollis facilisis neque quis dignissim. Nullam libero turpis, commodo at elementum a, volutpat ut odio."
 					},
 					{
 						title: "Binary Clock",
+						page: "binaryclock",
 						mainImage: "/images/clockMain.JPG",
 						images: ["/images/clock1.jpg", "/images/clock2.jpg"],
-						description: "Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus."
+						hook: "Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus.",
+						description: "Maecenas et neque fermentum, euismod dolor in, porttitor justo. Curabitur metus diam, laoreet vel nisi sed, pharetra viverra enim. Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus. Suspendisse malesuada congue sodales. In hac habitasse platea dictumst. Suspendisse mollis facilisis neque quis dignissim. Nullam libero turpis, commodo at elementum a, volutpat ut odio."
 					},
 					{
 						title: "Programmable Heart",
+						page: "programmableheart",
 						mainImage: "/images/heartMain.jpg",
 						images: ["/images/heart1.jpg"],
-						description: "In hac habitasse platea dictumst."
+						hook: "In hac habitasse platea dictumst.",
+						description: "Maecenas et neque fermentum, euismod dolor in, porttitor justo. Curabitur metus diam, laoreet vel nisi sed, pharetra viverra enim. Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus. Suspendisse malesuada congue sodales. In hac habitasse platea dictumst. Suspendisse mollis facilisis neque quis dignissim. Nullam libero turpis, commodo at elementum a, volutpat ut odio."						
 					},
 					{
 						title: "ATTiny Programmer",
+						page: "attinyprogrammer",
 						mainImage: "/images/attinyMain.jpg",
 						images: ["/images/attiny1.jpg"],
-						description: "Suspendisse malesuada congue sodales."
-					},
-					{
-						title: "Binary Clock",
-						mainImage: "/images/clockMain.JPG",
-						images: ["/images/clock1.jpg", "/images/clock2.jpg"],
-						description: "Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus."
-					},
-					{
-						title: "Programmable Heart",
-						mainImage: "/images/heartMain.jpg",
-						images: ["/images/heart1.jpg"],
-						description: "In hac habitasse platea dictumst."
-					},
-					{
-						title: "ATTiny Programmer",
-						mainImage: "/images/attinyMain.jpg",
-						images: ["/images/attiny1.jpg"],
-						description: "Suspendisse malesuada congue sodales."
+						hook: "Suspendisse malesuada congue sodales.",
+						description: "Maecenas et neque fermentum, euismod dolor in, porttitor justo. Curabitur metus diam, laoreet vel nisi sed, pharetra viverra enim. Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus. Suspendisse malesuada congue sodales. In hac habitasse platea dictumst. Suspendisse mollis facilisis neque quis dignissim. Nullam libero turpis, commodo at elementum a, volutpat ut odio."
 					}
 				];
 
@@ -129,7 +138,16 @@ app.get("/projects", function(req, res) {
 });
 
 app.get("/projects/:page", function(req, res) {
-	res.render("project_details", {project: })
+	if (req.params.page == "binaryclock") {
+		var proj = projects[0];
+	}
+	if (req.params.page == "programmableheart") {
+		var proj = projects[1];
+	}
+	if (req.params.page == "attinyprogrammer") {
+		var proj = projects[2];
+	}
+	res.render("project_details", {project: proj})
 })
 
 app.get("/getinvolved", function(req, res) {

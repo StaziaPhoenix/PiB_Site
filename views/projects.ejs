@@ -9,23 +9,17 @@
 
 <div class="container">
 
-	<div class="row">
-
 		<% projects.forEach(function(project) { %>
-			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+			<div class="card">
 				<a href="/projects/<%= project.page %>">
-				<div class="card card-outline-primary">
 					<img class="card-img-top" src="<%= project.mainImage %>" alt="project image">
 					<div class="card-block">
-						 <h4 class="card-text"><%= project.title %> </h4>
-						 <p class="card-text"><%= project.description %></p>
+						 <h4 class="card-title"><%= project.title %> </h4>
+						 <p class="card-text"><%= project.hook %></p>
 					</div>
-				</div>
 				</a>
 			</div>
 		<% }); %>
-
-	</div> <!-- class = row -->
 
 </div>
 
