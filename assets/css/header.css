@@ -20,8 +20,14 @@
 
 .btn-primary {
 	background-color: #336b87;
+	border: none;
 }
 
 .btn-primary:hover {
 	background-color: #90AFC5;
+}
+
+.btn-danger {
+	background-color: #763626;
+	border: none;
 }
