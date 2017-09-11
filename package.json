@@ -4,7 +4,10 @@
   "description": "Project in a Box Website",
   "main": "app.js",
   "scripts": {
-    "test": "test"
+    "start": "node app.js",
+    "pretest": "npm run lint",
+    "test": "echo \"I haven't set up tests yet >.< incoming\"",
+    "lint": "jshint --exclude ./node_modules . && jscs ."
   },
   "repository": {
     "type": "git",
@@ -18,11 +21,18 @@
   "homepage": "https://github.com/WigginWannabe/PiB_Site#readme",
   "dependencies": {
     "body-parser": "^1.18.0",
+    "connect-flash": "^0.1.1",
     "ejs": "^2.5.7",
     "express": "^4.15.4",
+    "express-session": "^1.15.5",
+    "method-override": "^2.3.9",
     "mongoose": "^4.11.11",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^4.2.1"
+  },
+  "devDependencies": {
+    "jscs": "^3.0.7",
+    "jshint": "^2.9.5"
   }
 }
