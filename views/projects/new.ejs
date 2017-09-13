@@ -1,21 +1,33 @@
 <% include ../partials/header %>
 <link rel="stylesheet" type="text/css" href="/css/native/forms.css">
+<script type="text/javascript" src='/js/forms.js'></script>
 
 <br><br>
 <h3 class='text-center'>Add Your Project</h3>
 
 <div class='container page-content'>
 	<div class='columns'>
-		<form class='column col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-6 centered'>
+		<form class='column col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-6 centered' onsubmit='return checkSubmit(event)' method='post'>
 
-			<!-- NAME -->
-			<div class='form-group'>
-				<label class='form-label' for='name'>Name</label>
-				<input class='form-input' type='text' id='name' name='project[name]' placeholder='Binary Clock'>
+			<div class='columns'>
+				<!-- NAME -->
+				<div class='column form-group'>
+					<label class='form-label' for='name'>Name</label>
+					<input class='form-input' type='text' id='name' name='project[name]' placeholder='Binary Clock'>
+				</div>
+
+				<!-- CREATORS -->
+				<div class='column form-group'>
+					<label class='form-label popover popover-right' for='name'>Creators<br>
+						<div class='popover-container'>
+							<div class='card'>
+								<div class='card-body'>Just list names, separated by commas. We'll take care of the rest.</div>
+							</div>
+						</div>
+					</label>
+					<input class='form-input' type='text' id='creators' name='project[creators]' placeholder='MrSwirlyEyes, Stitch'>
+				</div>
 			</div>
-
-			<!-- CREATORS -->
-			<!-- todo creators -->
 
 			<!-- MAIN IMAGE -->
 			<div class='form-group'>
@@ -38,29 +50,58 @@
 				<textarea class='form-input' id='description' name='project[description]' placeholder='Spicy jalapeno bacon ipsum dolor amet laborum tenderloin shankle dolor lorem pancetta consectetur id prosciutto pastrami. Dolor capicola magna fugiat, laboris culpa biltong pariatur minim nisi. Nisi incididunt consectetur, strip steak ex dolore ullamco biltong veniam swine sed fatback. Doner picanha andouille tongue veniam tail meatball salami shankle. Sirloin laboris dolore consequat, in chicken ball tip short loin officia salami mollit magna prosciutto. Burgdoggen pork anim ham hock pork belly. Laborum id kielbasa, fugiat aliquip meatloaf cupidatat ullamco et pork kevin ham.' rows='8'></textarea>
 			</div>
 
-			<!-- SKILLS LEARNED -->
-			<!-- todo skills learned -->
+			<div class='columns'>
+				<!-- SKILLS LEARNED -->
+				<div class='column form-group'>
+					<label class='form-label' for='skills-learned'>Skills Learned</label>
+					<div class='panel'>
+						<div class='panel-header'>
+							<input type='text' class='form-input' id='skill-input' onkeyup='checkEnter(event, this)'>
+							<div class='native-form-hint'>
+							</div>
+						</div>
 
-			<!-- TAGS -->
-			<!-- todo tags -->
+						<div class='panel-body' id='skill-list'></div>
+						<div class='panel-footer'></div>
+					</div>
+					<input type='text' id='skills-learned' name='project[getSkillsLearned()]' hidden>
+					<!-- todo skills learned -->
+				</div>
 
-			<!-- DIVISION -->
-			<div class='form-group'>
-				<label class='form-label' for='division'>Division</label>
-				<select class='form-select' id='division' name='project[division]'>
-					<option>R&D</option>
-					<option>Inspire</option>
-					<option>Partnership</option>
-					<option>Launch</option>
-				</select>
+				<!-- TAGS -->
+				<div class='column form-group'>
+					<label class='form-label' for='tags'>Tags</label>
+					<div class='panel'>
+						<div class='panel-body'>
+						</div>
+					</div>
+					<!-- todo tags -->
+				</div>
 			</div>
 
-			<!-- SEQUENCE -->
-			<div class="form-group">
-				<label class='form-label' for='division'>Division</label>
-				This will be a dropdown that lists all of the existing sequences, with option to add new sequence. Need to send sequences to this page.
+			<div class='columns'>
+				<!-- DIVISION -->
+				<div class='column form-group'>
+					<label class='form-label' for='division'>Division</label>
+					<select class='form-select' id='division' name='project[division]'>
+						<option>R&D</option>
+						<option>Inspire</option>
+						<option>Partnership</option>
+						<option>Launch</option>
+					</select>
+				</div>
+
+				<!-- SEQUENCE -->
+				<div class='column form-group'>
+					<label class='form-label' for='division'>Sequence</label>
+					<select class='form-select' id='division' name='project[sequence]'>
+						<option>Options</option>
+						<option><span class='form-icon icon icon-plus'></span>New</option>
+					</select>
+				</div>
 			</div>
 
+			<input type='button' class='btn btn-primary' value='Add Project' onclick='submit()'>
 		</form>
 	</div>
 </div>
