@@ -1,5 +1,7 @@
-.native-form-hint {
-	color: green;
-	padding: 5px;
-	text-align: center;
+#skills-learned-hint {
+	transition: all 250ms;
+}
+
+.modal-container {
+	outline: none;
 }

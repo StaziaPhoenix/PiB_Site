@@ -18,8 +18,7 @@
 
 				<!-- CREATORS -->
 				<div class='column form-group'>
-					<label class='form-label popover popover-right' for='name'>Creators<br>
-						<div class='popover-container'>
+					<label class='form-label popover popover-right' for='name'>Creators				<div class='popover-container'>
 							<div class='card'>
 								<div class='card-body'>Just list names, separated by commas. We'll take care of the rest.</div>
 							</div>
@@ -50,35 +49,73 @@
 				<textarea class='form-input' id='description' name='project[description]' placeholder='Spicy jalapeno bacon ipsum dolor amet laborum tenderloin shankle dolor lorem pancetta consectetur id prosciutto pastrami. Dolor capicola magna fugiat, laboris culpa biltong pariatur minim nisi. Nisi incididunt consectetur, strip steak ex dolore ullamco biltong veniam swine sed fatback. Doner picanha andouille tongue veniam tail meatball salami shankle. Sirloin laboris dolore consequat, in chicken ball tip short loin officia salami mollit magna prosciutto. Burgdoggen pork anim ham hock pork belly. Laborum id kielbasa, fugiat aliquip meatloaf cupidatat ullamco et pork kevin ham.' rows='8'></textarea>
 			</div>
 
+			<!-- SKILLS LEARNED AND TAGS ROW -->
 			<div class='columns'>
 				<!-- SKILLS LEARNED -->
 				<div class='column form-group'>
 					<label class='form-label' for='skills-learned'>Skills Learned</label>
-					<div class='panel'>
+					
+					<div class='panel' id='skill-panel'>
 						<div class='panel-header'>
-							<input type='text' class='form-input' id='skill-input' onkeyup='checkEnter(event, this)'>
-							<div class='native-form-hint'>
+							<input type='text' class='form-input' id='skill-input' onkeyup='checkEnter_Skill(event, this)'>
+							<div class='toast hidden' id='skills-learned-hint'>
 							</div>
 						</div>
 
 						<div class='panel-body' id='skill-list'></div>
 						<div class='panel-footer'></div>
 					</div>
-					<input type='text' id='skills-learned' name='project[getSkillsLearned()]' hidden>
-					<!-- todo skills learned -->
+					<input type='text' id='skills-learned' name='skillsLearned[getSkillsLearned()]' hidden>
 				</div>
 
 				<!-- TAGS -->
 				<div class='column form-group'>
-					<label class='form-label' for='tags'>Tags</label>
-					<div class='panel'>
+					<label class='form-label popover popover-right' for='tags'>Tags
+						<div class='popover-container'>
+							<div class='card'>
+								<div class='card-body'>Tags are tools or resources that students need in order to complete the project.</div>
+							</div>
+						</div>
+					</label>
+					<div class='panel' id='tag-panel'>
+						<div class='panel-header'>Select all that apply</div>
+
 						<div class='panel-body'>
+							<span class='chip c-hand' onclick='selectTag(this)'><span>EagleCAD</span></span>
+							<span class='chip c-hand' onclick='selectTag(this)'><span>3D Printer</span></span>
+							<span class='chip c-hand' onclick='selectTag(this)'><span>Laser Cutter</span></span>
+						</div>
+						<div class='panel-footer input-group'>
+							<input type='text' class='form-input' id='new-tag-input' onkeyup='checkEnter_Tag(event, this)'>
+							<span class='btn btn-primary input-group-btn' onclick='checkEnter_Tag(event, this)'><i class='icon icon-check'></i></span>
+						</div>
+						<div class='modal' id='new-tag-warning-modal'>
+						 	<div class='modal-overlay'></div>
+						 	<div class='modal-container' onfocusout='closeModal(event, this)' tabindex='-1'>
+								<div class='modal-header'>
+						    		<div class='modal-title h3'>Warning</div>
+						    	</div>
+						    	<div class="modal-body">
+						    		<p>When you add your project, this new tag will be added to our database so that builders can use it to filter projects, and other tutors can add it to their projects.</p>
+						    		<p>If you add a tag which is redundant, misspelled, or otherwise not meaningful, you compromise the usefulness of our site. That's not fun.</p>
+						    		<label class='form-switch'>
+						    			<input type='checkbox'>
+						    			<i class='form-icon'></i> I understand, and acknowledge that if I mess up our database with this tag, Stazia will be pissed AF.
+						    		</label>
+						    	</div>
+						    	<div class='modal-footer'>
+						    		<span class='btn disabled' id='add-tag-btn' onclick='addNewTag()'>Add Tag</span>
+						    	</div>
+						  </div>
 						</div>
 					</div>
-					<!-- todo tags -->
+
+					<input type='text' id='tags' name='tags[getTags()]' hidden>
+					<input type='text' id='new-tags' name='newTags[getNewTags()]' hidden>
 				</div>
 			</div>
 
+			<!-- DIVISION AND SEQUENCE ROW -->
 			<div class='columns'>
 				<!-- DIVISION -->
 				<div class='column form-group'>
