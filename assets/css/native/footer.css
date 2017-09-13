@@ -1,0 +1,14 @@
+.footer {
+	/*margin-top: 50px;*/
+	background-color: rgba(42,49,50,.7);
+	padding-top: 30px;
+	padding-bottom: 20px;
+	text-align: center;
+	font-size: 14px;
+	color: #F7EFE2;
+}
+
+#footer-img {
+	width: 10%;
+	margin: 30px;
+}

@@ -1,9 +1,17 @@
-var express = require('express'),
-	router = express.Router();
+var express		= require('express'),
+	router		= express.Router(),
+	Project		= require('../models/project');
 
 /* INDEX */
-router.get('/projects', function(req, res) {
-	res.send('This page will display all projects');
+router.get('/', function(req, res) {
+	Project.find({}, function(err, projects) {
+		if (err) {
+			console.log(err);
+			return res.redirect('/problem');
+		}
+
+		res.render('projects/index', {projects: projects});
+	});
 });
 
 /* SHOW */

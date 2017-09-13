@@ -7,7 +7,10 @@
     "start": "node app.js",
     "pretest": "npm run lint",
     "test": "echo \"I haven't set up tests yet >.< incoming\"",
-    "lint": "jshint --exclude ./node_modules . && jscs ."
+    "lint": "jshint --exclude ./node_modules . && jscs .",
+    "build": "browserify ./assets/js | uglifyjs -mc > ./dist/bundle.js",
+    "prebuild": "npm run clean",
+    "clean": "rimraf dist/*"
   },
   "repository": {
     "type": "git",
@@ -29,10 +32,13 @@
     "mongoose": "^4.11.11",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "passport-local-mongoose": "^4.2.1"
+    "passport-local-mongoose": "^4.2.1",
+    "spectre.css": "^0.4.0"
   },
   "devDependencies": {
     "jscs": "^3.0.7",
-    "jshint": "^2.9.5"
+    "jshint": "^2.9.5",
+    "rimraf": "^2.6.1",
+    "uglify-js": "^3.1.0"
   }
 }

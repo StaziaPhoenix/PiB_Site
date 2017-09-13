@@ -1,0 +1,32 @@
+<% include ../partials/header %>
+<link rel="stylesheet" type="text/css" href="/css/native/projects.css">
+
+<div class="page-header">
+	<div class="h1 text-center text-uppercase page-header-title">
+		Projects
+	</div>
+</div>
+
+<div class="container project-gallery">
+	<div class="columns">
+		<% projects.forEach(function(project) { %>
+			<div class="card">
+				<a href="/projects/<%= project._id %>">
+					<div class="card-image">
+						<img class="card-image-native" src="<%= project.mainImage %>" alt="project image">
+					</div>
+
+					<div class="card-header">
+						<h4 class="card-title h5"><%= project.name %> </h4>
+					</div>
+
+					<div class="card-body">
+						<p class="card-text"><%= project.hook %></p>
+					</div>
+				</a>
+			</div>
+		<% }); %>
+	</div>
+</div>
+
+<% include ../partials/footer %>

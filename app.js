@@ -22,6 +22,7 @@ app.use(flash());
 
 
 /******** DATABASE ********/
+console.log(process.env.DATABASE);
 mongoose.connect(process.env.DATABASE, {useMongoClient: true});
 mongoose.Promise = global.Promise;
 
@@ -35,8 +36,8 @@ app.use('/projects', projectRoutes);
 
 
 /******** SEED DATABASE DURING DEVELOPMENT ********/
-var seedDB = require('./seed');
-seedDB();
+// var seedDB = require('./seed');
+// seedDB();
 
 
 app.listen(app.get('port'), function() {

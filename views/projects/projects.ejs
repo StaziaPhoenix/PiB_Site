@@ -11,10 +11,10 @@
 
 		<% projects.forEach(function(project) { %>
 			<div class="card">
-				<a href="/projects/<%= project.page %>">
+				<a href="/projects/<%= project._id %>">
 					<img class="card-img-top" src="<%= project.mainImage %>" alt="project image">
 					<div class="card-block">
-						 <h4 class="card-title"><%= project.title %> </h4>
+						 <h4 class="card-title"><%= project.name %> </h4>
 						 <p class="card-text"><%= project.hook %></p>
 					</div>
 				</a>
