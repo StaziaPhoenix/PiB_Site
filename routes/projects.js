@@ -14,11 +14,16 @@ router.get('/', function(req, res) {
 	});
 });
 
+/* NEW */
+router.get('/new', function(req, res) {
+	res.render('projects/new');
+});
+
+/* CREATE */
+
 /* SHOW */
 router.get('/:id', function(req, res) {
 	res.send('This page will show details for a specific project');
 });
-
-
 
 module.exports = router;

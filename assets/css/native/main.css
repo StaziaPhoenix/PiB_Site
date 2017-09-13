@@ -3,11 +3,8 @@
 	padding: 0;
 }
 
-body {
-	background-image: url("/images/lightbulb.jpg");
-	background-attachment: fixed;
-	background-size: cover;
-	background-position: center;
+.page-content {
+	padding: 30px 30px 60px 30px;
 }
 
 .page-header {

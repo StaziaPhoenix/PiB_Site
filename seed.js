@@ -14,7 +14,9 @@ var	projects = [
 						media: ["/images/attiny1.jpg"],
 						hook: "Suspendisse malesuada congue sodales.",
 						description: "Maecenas et neque fermentum, euismod dolor in, porttitor justo. Curabitur metus diam, laoreet vel nisi sed, pharetra viverra enim. Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus. Suspendisse malesuada congue sodales. In hac habitasse platea dictumst. Suspendisse mollis facilisis neque quis dignissim. Nullam libero turpis, commodo at elementum a, volutpat ut odio.",
-						skillsLearned: ["PCB Design", "Arduino", "Embedded Chips", "Soldering", "C Programming"]
+						skillsLearned: ["PCB Design", "Arduino", "Embedded Chips", "Soldering", "C Programming"],
+						tags: ["Soldering", "EagleCAD"],
+						division: "R&D"
 					},
 					{
 						name: "Programmable Heart",
@@ -23,7 +25,9 @@ var	projects = [
 						media: ["/images/heart1.jpg"],
 						hook: "In hac habitasse platea dictumst.",
 						description: "Maecenas et neque fermentum, euismod dolor in, porttitor justo. Curabitur metus diam, laoreet vel nisi sed, pharetra viverra enim. Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus. Suspendisse malesuada congue sodales. In hac habitasse platea dictumst. Suspendisse mollis facilisis neque quis dignissim. Nullam libero turpis, commodo at elementum a, volutpat ut odio.",					
-						skillsLearned: ["PCB Design", "Arduino", "Embedded Chips", "Soldering", "C Programming"]				
+						skillsLearned: ["PCB Design", "Arduino", "Embedded Chips", "Soldering", "C Programming"],
+						tags: ["Soldering", "EagleCAD"],
+						division: "R&D"			
 					},
 					{
 						name: "Binary Clock",
@@ -32,7 +36,9 @@ var	projects = [
 						media: ["/images/clock1.jpg", "/images/clock2.jpg"],
 						hook: "Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus.",
 						description: "Maecenas et neque fermentum, euismod dolor in, porttitor justo. Curabitur metus diam, laoreet vel nisi sed, pharetra viverra enim. Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus. Suspendisse malesuada congue sodales. In hac habitasse platea dictumst. Suspendisse mollis facilisis neque quis dignissim. Nullam libero turpis, commodo at elementum a, volutpat ut odio.",
-						skillsLearned: ["PCB Design", "Arduino", "Embedded Chips", "Soldering", "C Programming"]
+						skillsLearned: ["PCB Design", "Arduino", "Embedded Chips", "Soldering", "C Programming"],
+						tags: ["Soldering", "EagleCAD"],
+						division: "R&D"
 					}
 				];
 

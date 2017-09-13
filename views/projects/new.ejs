@@ -1,0 +1,68 @@
+<% include ../partials/header %>
+<link rel="stylesheet" type="text/css" href="/css/native/forms.css">
+
+<br><br>
+<h3 class='text-center'>Add Your Project</h3>
+
+<div class='container page-content'>
+	<div class='columns'>
+		<form class='column col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-6 centered'>
+
+			<!-- NAME -->
+			<div class='form-group'>
+				<label class='form-label' for='name'>Name</label>
+				<input class='form-input' type='text' id='name' name='project[name]' placeholder='Binary Clock'>
+			</div>
+
+			<!-- CREATORS -->
+			<!-- todo creators -->
+
+			<!-- MAIN IMAGE -->
+			<div class='form-group'>
+				<label class='form-label' for='main-image'>Main Image</label>
+				<input class='form-input' type='file' id='main-image' name='mainImage'>
+			</div>
+
+			<!-- OTHER MEDIA -->
+			<!-- todo other media -->
+
+			<!-- HOOK -->
+			<div class='form-group'>
+				<label class='form-label' for='hook'>Hook<br><small>This is a <em>short</em> description of the project. Less than 150 characters please.</small></label>
+				<input class='form-input' type='text' id='hook' name='project[hook]' placeholder="It's one thing to own a binary clock. It's another level of nerd to build one." maxlength='150'>
+			</div>
+
+			<!-- FULL DESCRIPTION -->
+			<div class='form-group'>
+				<label class='form-label' for='description'>Description<br><small>This is the full description. No length limit (though more than one paragraph may be excessive). Talk about what the final product is, what they'll learn. Think about how you'd talk about the project if you were presenting it at an interview.</small></label>
+				<textarea class='form-input' id='description' name='project[description]' placeholder='Spicy jalapeno bacon ipsum dolor amet laborum tenderloin shankle dolor lorem pancetta consectetur id prosciutto pastrami. Dolor capicola magna fugiat, laboris culpa biltong pariatur minim nisi. Nisi incididunt consectetur, strip steak ex dolore ullamco biltong veniam swine sed fatback. Doner picanha andouille tongue veniam tail meatball salami shankle. Sirloin laboris dolore consequat, in chicken ball tip short loin officia salami mollit magna prosciutto. Burgdoggen pork anim ham hock pork belly. Laborum id kielbasa, fugiat aliquip meatloaf cupidatat ullamco et pork kevin ham.' rows='8'></textarea>
+			</div>
+
+			<!-- SKILLS LEARNED -->
+			<!-- todo skills learned -->
+
+			<!-- TAGS -->
+			<!-- todo tags -->
+
+			<!-- DIVISION -->
+			<div class='form-group'>
+				<label class='form-label' for='division'>Division</label>
+				<select class='form-select' id='division' name='project[division]'>
+					<option>R&D</option>
+					<option>Inspire</option>
+					<option>Partnership</option>
+					<option>Launch</option>
+				</select>
+			</div>
+
+			<!-- SEQUENCE -->
+			<div class="form-group">
+				<label class='form-label' for='division'>Division</label>
+				This will be a dropdown that lists all of the existing sequences, with option to add new sequence. Need to send sequences to this page.
+			</div>
+
+		</form>
+	</div>
+</div>
+
+<% include ../partials/footer %>

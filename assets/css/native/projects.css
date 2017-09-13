@@ -1,6 +1,12 @@
+body {
+	background-image: url("/images/lightbulb.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+}
+
 .project-gallery {
 	background-color: white;
-	padding: 30px;
 }
 
 .card {

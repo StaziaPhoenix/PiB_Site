@@ -8,6 +8,8 @@ var projectSchema = new mongoose.Schema({
     hook: String,
     description: String,
     skillsLearned: [String],
+    tags: [String],
+    division: String,
     sequence: {
 		type: mongoose.Schema.Types.ObjectId,
 		ref: 'Sequence',
