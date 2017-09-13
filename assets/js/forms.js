@@ -2,6 +2,17 @@ var skillsLearned = [];
 var tags = [];
 var newTags = [];
 
+document.querySelector('#new-tag-warning-modal input[type=checkbox]').
+addEventListener('change', function(event) {
+	console.log(event);
+	console.log(event.target);
+	if (event.target.checked) {
+		document.getElementById('add-tag-btn').classList.remove('disabled');
+	} else {
+		document.getElementById('add-tag-btn').classList.add('disabled');
+	}
+});
+
 function submit() {
 	document.querySelector('form').submit();
 }
@@ -53,14 +64,8 @@ function checkEnter_Tag(event, input) {
 
 		document.querySelector('#new-tag-warning-modal').classList.add('active');
 		document.querySelector('#new-tag-warning-modal > .modal-container').focus();
-		document.querySelector('#new-tag-warning-modal input[type=checkbox]').
-				addEventListener('change', function(event) {
-					if (event.target.checked) {
-						document.getElementById('add-tag-btn').classList.remove('disabled');
-					} else {
-						document.getElementById('add-tag-btn').classList.add('disabled');
-					}
-				});
+		document.querySelector('#new-tag-warning-modal input[type=checkbox]').checked = false;
+		document.getElementById('add-tag-btn').classList.add('disabled');
 	}
 }
 
@@ -78,6 +83,7 @@ function selectTag(tag) {
 function closeModal(event, modal) {
 	if (!event.relatedTarget)
 		modal.parentNode.classList.remove('active');
+		// Reset the acknowledgement checkbox to false
 }
 
 function addNewTag(modal) {
@@ -108,14 +114,9 @@ function addNewTag(modal) {
 	// close the modal and clear the input
 	document.getElementById('new-tag-warning-modal').classList.remove('active');
 	document.getElementById('new-tag-input').value = '';
-
-	// Reset the acknowledgement checkbox to false
-	document.querySelector('#new-tag-warning-modal input[type=checkbox]').checked = false;
 }
 
 function deleteNewTag(tag) {
-	console.log(tag);
-
 	// remove it from the array
 	var idxToRemove = newTags.indexOf(tag.parentNode.firstChild.innerHTML);
 	newTags.splice(idxToRemove, 1);
