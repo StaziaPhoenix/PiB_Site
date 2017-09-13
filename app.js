@@ -5,7 +5,8 @@ var	express			=	require('express'),
 	LocalStrategy	=	require('passport-local'),
 	methodOverride	=	require('method-override'),
 	mongoose		=	require('mongoose'),
-	flash			=	require('connect-flash');
+	flash			=	require('connect-flash'),
+	formidable		=	require('express-formidable');
 
 var	User			=	require('./models/user');
 
@@ -19,6 +20,7 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/assets'));
 app.use(methodOverride('_method'));
 app.use(flash());
+app.use(formidable());
 
 
 /******** DATABASE ********/

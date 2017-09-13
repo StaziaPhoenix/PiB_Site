@@ -21,7 +21,7 @@ router.get('/new', function(req, res) {
 
 /* CREATE */
 router.post('/', function(req, res) {
-	console.log(req.params.project);
+	console.log(req);
 	res.send('you posted');
 });
 
