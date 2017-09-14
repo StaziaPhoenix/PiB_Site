@@ -13,7 +13,13 @@ addEventListener('change', function(event) {
 	}
 });
 
-function submit() {
+function _submit() {
+	console.log("HERE");
+
+	document.getElementById('new-tags').value = newTags.join('|');
+	document.getElementById('tags').value = tags.join('|');
+	document.getElementById('skills-learned').value = skillsLearned.join('|');
+
 	document.querySelector('form').submit();
 }
 

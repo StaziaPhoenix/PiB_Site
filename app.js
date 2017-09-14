@@ -6,7 +6,8 @@ var	express			=	require('express'),
 	methodOverride	=	require('method-override'),
 	mongoose		=	require('mongoose'),
 	flash			=	require('connect-flash'),
-	formidable		=	require('express-formidable');
+	helmet			=	require('helmet'),
+	dotenv			=	require('dotenv');
 
 var	User			=	require('./models/user');
 
@@ -16,11 +17,20 @@ var	projectRoutes	=	require('./routes/projects'),
 
 /******** THINGS TO USE ********/
 app.set('port', (process.env.PORT || 3000));
+app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/assets'));
 app.use(methodOverride('_method'));
+
+app.use(require("express-session")({
+	secret: "I love my Iubi AND my kittens.",
+	resave: false,
+	saveUninitialized: false
+}));
+
 app.use(flash());
-app.use(formidable());
+app.use(helmet());
+dotenv.load();
 
 
 /******** DATABASE ********/
@@ -36,12 +46,11 @@ app.use('/projects', projectRoutes);
 
 /******** PASSPORT ********/
 
-
 /******** SEED DATABASE DURING DEVELOPMENT ********/
 // var seedDB = require('./seed');
 // seedDB();
 
 
 app.listen(app.get('port'), function() {
-    console.log('PiB Site running on ', app.get('port'));
+    console.log('Pibsite running on ', app.get('port'));
 });

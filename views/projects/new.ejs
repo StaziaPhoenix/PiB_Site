@@ -6,7 +6,7 @@
 
 <div class='container page-content'>
 	<div class='columns'>
-		<form class='column col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-6 centered' onsubmit='return checkSubmit(event)' method='post'>
+		<form class='column col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-6 centered' action='/projects' method='post'>
 
 			<div class='columns'>
 				<!-- NAME -->
@@ -29,8 +29,14 @@
 
 			<!-- MAIN IMAGE -->
 			<div class='form-group'>
-				<label class='form-label' for='main-image'>Main Image</label>
-				<input class='form-input' type='file' id='main-image' name='mainImage'>
+				<label class='form-label popover popover-right' for='main-image'>Main Image (URL)
+					<div class='popover-container'>
+						<div class='card'>
+							<div class='card-body'>All of our project images should be public on instagram or facebook - go grab their links and we'll use them here.</div>
+						</div>
+					</div>
+				</label>
+				<input class='form-input' type='text' id='main-image' name='project[mainImage]'>
 			</div>
 
 			<!-- OTHER MEDIA -->
@@ -52,7 +58,7 @@
 			<div class='columns'>
 				<!-- SKILLS LEARNED -->
 				<div class='column form-group'>
-					<label class='form-label' for='skills-learned'>Skills Learned</label>
+					<label class='form-label'>Skills Learned</label>
 					
 					<div class='panel' id='skill-panel'>
 						<div class='panel-header'>
@@ -64,12 +70,12 @@
 						<div class='panel-body' id='skill-list'></div>
 						<div class='panel-footer'></div>
 					</div>
-					<input type='text' id='skills-learned' name='skillsLearned[getSkillsLearned()]' hidden>
+					<input type='text' name='skillsLearned' id='skills-learned' hidden>
 				</div>
 
 				<!-- TAGS -->
 				<div class='column form-group'>
-					<label class='form-label popover popover-right' for='tags'>Tags
+					<label class='form-label popover popover-right'>Tags
 						<div class='popover-container'>
 							<div class='card'>
 								<div class='card-body'>Tags are tools or resources that students need in order to complete the project.</div>
@@ -105,13 +111,12 @@
 						    	<div class='modal-footer'>
 						    		<span class='btn disabled' id='add-tag-btn' onclick='addNewTag()'>Add Tag</span>
 						    	</div>
-						  </div>
-						</div>
+						 	</div>
+						</div> <!-- END MODAL -->
 					</div>
-
-					<input type='text' id='tags' name='tags[getTags()]' hidden>
-					<input type='text' id='new-tags' name='newTags[getNewTags()]' hidden>
-				</div>
+					<input type='text' name='newTags' id='new-tags' hidden>
+					<input type='text' name='tags' id='tags' hidden>
+				</div> <!-- END TAGS -->
 			</div>
 
 			<!-- DIVISION AND SEQUENCE ROW -->
@@ -129,15 +134,52 @@
 
 				<!-- SEQUENCE -->
 				<div class='column form-group'>
-					<label class='form-label' for='division'>Sequence</label>
-					<select class='form-select' id='division' name='project[sequence]'>
-						<option>Options</option>
-						<option><span class='form-icon icon icon-plus'></span>New</option>
-					</select>
+					<label class='form-label' for='sequence'>Sequence</label>
+					<div class='panel' id='tag-panel'>
+						<div class='panel-header'>
+							<div class='has-icon-left'>
+								<input class='form-input' type='text' name='newSequence' placeholder='New Sequence'>
+								<i class="form-icon icon icon-plus"></i>
+							</div>
+						</div>
+
+						<div class="divider text-center" data-content="OR"></div>
+
+						<div class='panel-body'>
+							<input class='form-input' list='sequences' placeholder='Add to an existing sequence' name='project[sequence]'>
+							  <datalist id='sequences'>
+								<% sequences.forEach(function (sequence) { %>
+									<option value='<%= sequence.name %>'>
+								<% }) %>
+							  </datalist> 
+						</div>
+
+						<div class='panel-footer'></div>
+
+					</div> <!-- END PANEL -->
+
+<!-- 					<label class='form-radio'>
+						<input type='radio' name='project[sequence]' value='new' checked>
+						<i class="form-icon"></i><i class="icon icon-plus"></i>New: 
+					</label>
+					<label class="form-radio">
+						<input type='radio' name='project[sequence]' value='blck'>
+						<i class="form-icon"></i> Binary Clock
+					</label>
+					<label class="form-radio">
+						<input type='radio' name='project[sequence]' value='guitar'>
+						<i class="form-icon"></i> Guitar Effects Pedals
+					</label>
+					<label class="form-radio">
+						<input type='radio' name='project[sequence]' value='roboarm'>
+						<i class="form-icon"></i> Robotic Arm
+					</label>
+ -->
+					
 				</div>
 			</div>
 
-			<input type='button' class='btn btn-primary' value='Add Project' onclick='submit()'>
+			<input type='button' class='btn btn-primary' value='Add Project' onclick="_submit()">
 		</form>
 	</div>
 </div>

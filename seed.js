@@ -1,6 +1,7 @@
 var mongoose	=	require('mongoose'),
 	Project		=	require('./models/project'),
-	Sequence	=	require('./models/sequence');
+	Sequence	=	require('./models/sequence'),
+	Tag			=	require('./models/tag');
 
 var	sequence = {
 	name: "Binary Clock"
@@ -43,6 +44,8 @@ var	projects = [
 				];
 
 function seedDB() {
+	Tag.remove({}, function(err) {});
+
 	Sequence.remove({}, function(err) {
 		if (err) {
 			return console.log(err);
@@ -60,19 +63,19 @@ function seedDB() {
 				} 
 				console.log("Added sequence " + sequence.name);
 
+				console.log(sequence);
+
 				// add projects
-				for (var i = 0; i < projects.length; i++) {
-					projects[i].sequence = sequence;
-					Project.create(projects[i], function(err, project) {
+				projects.forEach(function(project) {
+					project.sequence = sequence;
+					Project.create(project, function(err, projectReturned) {
 						if (err) {
 							console.log(err);
 						} else {
-							sequence.projects.push({order: i, project: project});
-							sequence.save();
-							console.log("Saved project " + project.name + " to " + sequence.name);
+							console.log("Saved project " + projectReturned.name + " to " + sequence.name);
 						}
 					});
-				} // end iteration through adding projects
+				});
 			}); // end SEQUENCE create
 		}); // end PROJECT remove
 	}); // end SEQUENCE remove
