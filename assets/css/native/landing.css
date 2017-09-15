@@ -44,11 +44,14 @@
 }
 
 .division {
-	margin: 4px;
+	margin: 8px;
 	width: 300px;
-	color: white;
 	line-height: 100%;
 	position: relative;
+}
+
+.division a {
+	color: white;
 }
 
 .division-title, .division-content {
