@@ -1,59 +1,101 @@
-.head {
-	position: relative;
-	height: 400px;
-	background-image: url("/images/headerimg.jpg");
+.big-graphic-head {
+	background-image: url("/images/lightbulb.jpg");
 	background-attachment: fixed;
 	background-size: cover;
-	background-repeat: no-repeat;
+	background-position: center;
+	color: white;
+	height: 100vh;
 }
 
-.head-text {
+.big-graphic-head-text {
 	position: absolute;
-	bottom: 0;
-	padding-top: 25px;
-	width: 100%;
-	background-color: rgba(255,255,255,.8);
-	text-transform: uppercase;
-	font-size: 48px;
-	text-align: center;
-	line-height: 150px;
+	left: 40vw;
+	top: 25vh;
 }
 
-.container {
-	width: 80%;
-}
-
-.options {
-	padding: 50px 0;
+.about-us {
+	padding: 15px;
+	margin: 40px auto 20px auto;
 	display: flex;
-	flex-wrap: wrap;
+	align-items: center;
 	justify-content: center;
 }
 
-.card {
-	margin: 15px 30px;
+.about-us img {
+	width: 30vw;
+	margin-bottom: 3%;
+	margin-right: 30px;
+}
+
+.divisions {
+	margin-bottom: 60px;
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.divisions h1 {
+	margin-bottom: 20px;
+}
+
+.division p {
+	padding: 8px;
+}
+
+.division {
+	margin: 4px;
 	width: 300px;
+	color: white;
+	line-height: 100%;
+	position: relative;
 }
 
-.card-img-top {
-	width: 100%;
-	height: 200px;
-	object-fit: cover;
+.division-title, .division-content {
+	padding: 15px;
 }
 
-.card-text {
-	color: #2A3132;
-	margin-bottom: 50px;
-}
-
-.intro-text {
-	padding: 75px 0 30px 0;
-	/*width: 80%;*/
-}
-
-.btn {
+.img {
 	display: block;
-	position: absolute;
-	bottom: 0;
-	margin: 10px 0;
+  	width: 100%;
 }
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 45px;
+  transition: .5s ease;
+}
+
+.division:hover .overlay {
+   height: 100%;
+}
+
+.build-stuff .overlay {
+	background-color: rgba(172,190,190,.95);
+}
+
+.rnd .overlay {
+	background-color: rgba(160,29,38,.95);
+}
+
+.inspire .overlay {
+	background-color: rgba(144,175,197,.95);
+}
+
+.launch .overlay {
+	background-color: rgba(51,107,135,.95);
+}
+
+.partnership .overlay {
+	background-color: rgba(118,54,38,.95);
+}
+
+/*.card {
+	padding: 10px;
+	margin-top: 8px;
+}*/
