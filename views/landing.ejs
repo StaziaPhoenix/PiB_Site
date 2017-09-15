@@ -1,41 +1,75 @@
-<% include partials/header %>
-<br><br><br>
-<p class="text-center text-large">This will be the landing page.</p>
+<% include partials/head %>
+<!-- <% include partials/header %> -->
+<link rel='stylesheet' type='text/css' href='/css/native/landing.css'>
 
-<!-- <link rel="stylesheet" type="text/css" href="/css/landing.css">
-
-<div class="head">
-	<div class="head-text">
-		Project in a Box
+<div class='big-graphic-head'>
+	<div class='big-graphic-head-text'>
+		<h1><big>Learn by Building</big></h1>
+		<h5>Project in a Box. Join our movement  <i class='icon icon-arrow-down'></i></h5>
 	</div>
 </div>
 
-<div class="container">
+<div class='container'>
+	<div class='columns'>
 
-	<div class="intro-text">
+		<div class='column col-xs-12 col-sm-12 col-md-11 col-lg-11 col-xl-10 col-mx-auto text-justify about-us'>
 
-		<p><big>Project-in-a-box is the student development team behind ECE 196 and ECE 188. We are a team of student engineers whose goal is to improve the hands-on education at UCSD Jacobs School of Engineering. We design and develop all of the projects that would eventually be used in ECE 196 or ECE 188. Currently, we have completed 7 projects that include (Guitar Effects, Binary Clock, Solar Tracker, Robotic Arm, Smart Mirror, IR Whiteboard, Arcade Emulator, etc.) and have nearly 15 active projects in progress.</big></p>
+			<img class='hide-md hide-sm hide-xs' src='/images/logo_black.png'>
 
-	</div>
+			<div class='about-us-text'>
+				<p>Here at Project in a Box, our vision is to bring engineering back to its roots - people inventing things for the good of their community. We aim to bring interactive learning to every stage of education so that students can readily apply scientific theory to real, practical engineering applications. All of our curriculum is hands-on, and gives students something tangible to produce and take home while training them in a range of design and prototyping skillsets.</p>
 
-	<hr>
+				<p>Our name is a relic of our roots: a team of engineering students at UC San Diego who designed our first projects, fully documented them, and put all of the materials in a kit - the box - that we could hand to a fellow student. Thus, each project is a standalone product utilizing a set of development skills that we could pass on to our fellow students with a simple box. Today, we have expanded to reach out to our greater community, but we keep the box-mentality of knowledge sharing in all of our ventures.</p>
 
-	<div class="options">
-		<div class="card">
-			<h4 class="card-header">Build</h4>
-			<img class="card-img-top" src="/images/build.jpeg" alt="Card image build">
-			<div class="card-block">
-				<p class="card-text">Browse our published projects and choose what to build - all of our materials and instructions are open source so that you can learn hands-on prototyping skills.</p>
-				<a href="/projects" class="btn btn-primary">View Projects</a>
+				<p>In order to serve a range of demographics, PiB is split into four divisions - poke around below to identify which division is right for you.</p>
 			</div>
-		</div>
-		<div class="card">
-			<h4 class="card-header">Join</h4>
-			<img class="card-img-top" src="/images/enroll.jpg" alt="Card image build">
-			<div class="card-block">
-				<p class="card-text">Learn about how to become involved with PiB, be it as a developer or by enrolling in our programs.</p>
-				<a href="/getinvolved" class="btn btn-primary">Get Involved</a>
-			</div>
+		</div> <!-- END ABOUT US -->
+
+		<div class='divider'></div>
+
+		<div class='column col-xs-12 col-sm-12 col-md-11 col-lg-11 col-xl-10 col-mx-auto'>
+			<h1 class='text-center'>Divisions</h1>
+			<div class='divisions'>
+				<div class='division build-stuff'>
+					<img src='/images/build2.jpeg' class='img'>
+					<div class='overlay rounded' href>
+						<div class='h4 division-title'>Build Stuff</div>
+						<p>A repository of all our projects, with full documentation. If you’re an independent learner and want to get straight to building stuff, or want to peek at what we make, jump over here.</p>
+					</div>
+				</div>
+
+				<div class='division rnd'>
+					<img src='/images/rnd.jpeg' class='img'>
+					<div class='overlay rounded' href>
+						<div class='h4 division-title'>R&D</div>
+						<p>Our college-level curriculum, targeting community colleges and universities with the aim of supporting makerspaces. Come here to learn about bringing hands-on curriculum to your campus.</p>
+					</div>
+				</div>
+
+				<div class='division inspire'>
+					<img src='/images/inspire.jpeg' class='img'>
+					<div class='overlay rounded' href>
+						<div class='h4 division-title'>Inspire</div>
+						<p>Inspire targets K-12 education, including schools and extracurricular programs. Come here to view our grade-school curriculum and bring hands-on curriculum to your school.</p>
+					</div>
+				</div>
+
+				<div class='division launch'>
+					<img src='/images/cute_box.jpeg' class='img'>
+					<div class='overlay rounded' href>
+						<div class='h4 division-title'>Launch</div>
+						<p class='division-content'>Launch focuses on our home front: Jacobs School of Engineering. The Launch Program supports Jacobs Students as they build a set of our projects over one quarter - come here to join and start making things for credit.</p>
+			        </div>
+				</div>
+
+				<div class='division partnership'>
+					<img src='/images/build.jpeg' class='img'>
+					<div class='overlay rounded' href>
+						<div class='h4 division-title'>Partnership</div>
+						<p>Our industry-facing division, Partnership targets engineering professionals looking to partner with students for advanced projects, recruit students with building experience, and collaborate on educational events. Visit the Partnership division to explore collaboration options!</p>
+					</div>
+				</div>
+			</div> <!-- END DIVISIONS -->
 		</div>
 	</div>
 
