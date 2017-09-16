@@ -302,26 +302,6 @@ body
     background: #fff; text-rendering: optimizeLegibility;
 }
 
-a
-{text-decoration: none; 
-
-    color: #5764c6; outline: none;
-}
-
-a:focus
-{
-    box-shadow: 0 0 0 .1rem rgba(87, 100, 198, .2);
-}
-
-a:focus,
-a:hover,
-a:active,
-a.active
-{text-decoration: underline; 
-
-    color: #4452c0;
-}
-
 h1,
 h2,
 h3,
