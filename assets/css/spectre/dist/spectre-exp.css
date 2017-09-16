@@ -2,11 +2,11 @@
 .calendar
 {display: block; min-width: 280px; text-align: center; 
 
-    border: .05rem solid #e7e9ed; border-radius: .1rem;
+    border: .05rem solid #c2cbcc; border-radius: .1rem;
 }
 
 .calendar .calendar-nav
-{font-size: .8rem; display: -ms-flexbox; display: flex; padding: .4rem; border-top-left-radius: .1rem; border-top-right-radius: .1rem; background: #f8f9fa; 
+{font-size: .8rem; display: -ms-flexbox; display: flex; padding: .4rem; border-top-left-radius: .1rem; border-top-right-radius: .1rem; background: #d3d9da; 
 
     -ms-flex-align: center; align-items: center;
 }
@@ -25,13 +25,13 @@
 }
 
 .calendar .calendar-header
-{font-size: .6rem; color: #acb3c2; border-bottom: .05rem solid #e7e9ed; 
-    background: #f8f9fa;
+{font-size: .6rem; color: #8b9b9d; border-bottom: .05rem solid #c2cbcc; 
+    background: #d3d9da;
 }
 
 .calendar .calendar-body
 {
-    color: #727e96;
+    color: #596769;
 }
 
 .calendar .calendar-date
@@ -42,29 +42,29 @@
 
 .calendar .calendar-date .date-item
 {line-height: 1rem; position: relative; width: 1.4rem; height: 1.4rem; padding: .1rem; cursor: pointer; 
-    transition: all .2s ease; text-align: center; vertical-align: middle; white-space: nowrap; text-decoration: none; color: #727e96; border: .05rem solid transparent; border-radius: 50%; outline: none; background: transparent; -webkit-appearance: none;    -moz-appearance: none;         appearance: none;
+    transition: all .2s ease; text-align: center; vertical-align: middle; white-space: nowrap; text-decoration: none; color: #596769; border: .05rem solid transparent; border-radius: 50%; outline: none; background: transparent; -webkit-appearance: none;    -moz-appearance: none;         appearance: none;
 }
 
 .calendar .calendar-date .date-item.date-today
-{color: #5764c6; 
-    border-color: #e4e6f6;
+{color: #336b87; 
+    border-color: #9dc6da;
 }
 
 .calendar .calendar-date .date-item:focus
 {
-    box-shadow: 0 0 0 .1rem rgba(87, 100, 198, .2);
+    box-shadow: 0 0 0 .1rem rgba(51, 107, 135, .2);
 }
 
 .calendar .calendar-date .date-item:focus,
 .calendar .calendar-date .date-item:hover
-{text-decoration: none; color: #5764c6; border-color: #e4e6f6; 
-    background: #fbfbfe;
+{text-decoration: none; color: #336b87; border-color: #9dc6da; 
+    background: #b3d3e2;
 }
 
 .calendar .calendar-date .date-item:active,
 .calendar .calendar-date .date-item.active
-{color: #fff; border-color: #3e4cb6; 
-    background: #4c59c2;
+{color: #f4f4ef; border-color: #285469; 
+    background: #2f627c;
 }
 
 .calendar .calendar-date .date-item.badge::after
@@ -88,7 +88,7 @@
 .calendar .calendar-range::before
 {position: absolute; top: 50%; right: 0; left: 0; height: 1.4rem; content: ''; transform: translateY(-50%); 
 
-    background: #eff1fa;
+    background: #a8ccde;
 }
 
 .calendar .calendar-range.range-start::before
@@ -103,7 +103,7 @@
 
 .calendar .calendar-range .date-item
 {
-    color: #5764c6;
+    color: #336b87;
 }
 
 .calendar.calendar-lg .calendar-body
@@ -112,8 +112,8 @@
 }
 
 .calendar.calendar-lg .calendar-body .calendar-date
-{display: -ms-flexbox; display: flex;     flex-direction: column; height: 5.5rem; padding: 0; border-right: .05rem solid #e7e9ed; 
-    border-bottom: .05rem solid #e7e9ed; -ms-flex-direction: column;
+{display: -ms-flexbox; display: flex;     flex-direction: column; height: 5.5rem; padding: 0; border-right: .05rem solid #c2cbcc; 
+    border-bottom: .05rem solid #c2cbcc; -ms-flex-direction: column;
 }
 
 .calendar.calendar-lg .calendar-body .calendar-date:nth-child(7n)
@@ -154,14 +154,14 @@
 }
 
 .calendar.calendar-lg .calendar-event
-{font-size: .6rem; display: block; overflow: hidden; margin: .1rem auto; padding: 3px 4px; text-align: left; white-space: nowrap; text-overflow: ellipsis; color: #5764c6; border-radius: .1rem; 
-    background: #eff1fa;
+{font-size: .6rem; display: block; overflow: hidden; margin: .1rem auto; padding: 3px 4px; text-align: left; white-space: nowrap; text-overflow: ellipsis; color: #336b87; border-radius: .1rem; 
+    background: #a8ccde;
 }
 
 .carousel
 {position: relative; display: block; overflow: hidden; width: 100%; 
 
-    background: #f8f9fa;
+    background: #d3d9da;
 }
 
 .carousel .carousel-container
@@ -190,8 +190,8 @@
 
 .carousel .carousel-container .item-prev,
 .carousel .carousel-container .item-next
-{position: absolute; z-index: 200; top: 50%; transition: all .4s ease; transform: translateY(-50%); opacity: 0; color: #e7e9ed; border-color: rgba(231, 233, 237, .5); 
-    background: rgba(231, 233, 237, .25);
+{position: absolute; z-index: 200; top: 50%; transition: all .4s ease; transform: translateY(-50%); opacity: 0; color: #c2cbcc; border-color: rgba(194, 203, 204, .5); 
+    background: rgba(194, 203, 204, .25);
 }
 
 .carousel .carousel-container .item-prev
@@ -218,7 +218,7 @@
 .carousel .carousel-locator:nth-of-type(3):checked ~ .carousel-nav .nav-item:nth-of-type(3),
 .carousel .carousel-locator:nth-of-type(4):checked ~ .carousel-nav .nav-item:nth-of-type(4)
 {
-    color: #e7e9ed;
+    color: #c2cbcc;
 }
 
 .carousel .carousel-nav
@@ -229,7 +229,7 @@
 .carousel .carousel-nav .nav-item
 {position: relative; display: block; max-width: 2.5rem; height: 1.6rem; margin: .2rem; 
 
-    color: rgba(231, 233, 237, .5); -ms-flex: 1 0 auto;     flex: 1 0 auto;
+    color: rgba(194, 203, 204, .5); -ms-flex: 1 0 auto;     flex: 1 0 auto;
 }
 
 .carousel .carousel-nav .nav-item::before
@@ -307,7 +307,7 @@
 }
 
 .comparison-slider .comparison-after::after
-{position: absolute; top: 50%; right: .4rem; width: 3px; height: 3px; content: ''; transform: translate(50%, -50%); color: #fff; border-radius: 50%; 
+{position: absolute; top: 50%; right: .4rem; width: 3px; height: 3px; content: ''; transform: translate(50%, -50%); color: #f4f4ef; border-radius: 50%; 
     background: currentColor; box-shadow: 0 -5px, 0 5px;
 }
 
@@ -322,8 +322,8 @@
 }
 
 .comparison-slider .comparison-label
-{position: absolute; bottom: .8rem; padding: .2rem .4rem; -webkit-user-select: none;    -moz-user-select: none;     -ms-user-select: none;         user-select: none; color: #fff; 
-    background: rgba(69, 77, 93, .5);
+{position: absolute; bottom: .8rem; padding: .2rem .4rem; -webkit-user-select: none;    -moz-user-select: none;     -ms-user-select: none;         user-select: none; color: #f4f4ef; 
+    background: rgba(42, 49, 50, .5);
 }
 
 @keyframes first-run
@@ -365,8 +365,8 @@
 .filter .filter-tag#tag-roleplaying:checked ~ .filter-nav .chip[for='tag-roleplaying'],
 .filter .filter-tag#tag-shooter:checked ~ .filter-nav .chip[for='tag-shooter'],
 .filter .filter-tag#tag-sports:checked ~ .filter-nav .chip[for='tag-sports']
-{color: #fff; 
-    background: #5764c6;
+{color: #f4f4ef; 
+    background: #336b87;
 }
 
 .filter .filter-tag#tag-action:checked ~ .filter-body .column:not([data-tag~='tag-action']),
@@ -378,7 +378,7 @@
 }
 
 .meter
-{display: block; width: 100%; height: .8rem; border: 0; border-radius: .1rem; background: #f8f9fa; 
+{display: block; width: 100%; height: .8rem; border: 0; border-radius: .1rem; background: #d3d9da; 
 
     -webkit-appearance: none;       -moz-appearance: none;            appearance: none;
 }
@@ -398,7 +398,7 @@
 
 .meter::-webkit-meter-bar
 {
-    background: #f8f9fa;
+    background: #d3d9da;
 }
 
 .meter::-webkit-meter-optimum-value
@@ -413,7 +413,7 @@
 
 .meter::-webkit-meter-even-less-good-value
 {
-    background: #e85600;
+    background: #a01d26;
 }
 
 .meter::-moz-meter-bar,
@@ -436,7 +436,7 @@
 
 .meter:-moz-meter-sub-sub-optimum::-moz-meter-bar
 {
-    background: #e85600;
+    background: #a01d26;
 }
 
 .parallax
@@ -448,7 +448,7 @@
 .parallax .parallax-content
 {width: 100%; height: auto; transition: all .4s ease; transform: perspective(1000px); 
 
-    box-shadow: 0 1rem 2.1rem rgba(69, 77, 93, .3); transform-style: preserve-3d;
+    box-shadow: 0 1rem 2.1rem rgba(42, 49, 50, .3); transform-style: preserve-3d;
 }
 
 .parallax .parallax-content::before
@@ -458,7 +458,7 @@
 }
 
 .parallax .parallax-front
-{position: absolute; z-index: 1; top: 0; left: 0; display: -ms-flexbox; display: flex; width: 100%; height: 100%; transition: all .4s ease; transform: translateZ(50px) scale(.95); text-align: center; color: #fff; text-shadow: 0 0 20px rgba(69, 77, 93, .75); 
+{position: absolute; z-index: 1; top: 0; left: 0; display: -ms-flexbox; display: flex; width: 100%; height: 100%; transition: all .4s ease; transform: translateZ(50px) scale(.95); text-align: center; color: #f4f4ef; text-shadow: 0 0 20px rgba(42, 49, 50, .75); 
 
     -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center;
 }
@@ -544,7 +544,7 @@
 }
 
 .progress
-{position: relative; width: 100%; height: .2rem; color: #5764c6; border: 0; border-radius: .1rem; background: #f0f1f4; 
+{position: relative; width: 100%; height: .2rem; color: #336b87; border: 0; border-radius: .1rem; background: #cad2d3; 
 
     -webkit-appearance: none;       -moz-appearance: none;            appearance: none;
 }
@@ -556,17 +556,17 @@
 
 .progress::-webkit-progress-value
 {border-radius: .1rem; 
-    background: #5764c6;
+    background: #336b87;
 }
 
 .progress::-moz-progress-bar
 {border-radius: .1rem; 
-    background: #5764c6;
+    background: #336b87;
 }
 
 .progress:indeterminate
 {
-    animation: progress-indeterminate 1.5s linear infinite; background: #f0f1f4 linear-gradient(to right, #5764c6 30%, #f0f1f4 30%) top left/150% 150% no-repeat;
+    animation: progress-indeterminate 1.5s linear infinite; background: #cad2d3 linear-gradient(to right, #336b87 30%, #cad2d3 30%) top left/150% 150% no-repeat;
 }
 
 .progress:indeterminate::-moz-progress-bar
@@ -594,23 +594,23 @@
 
 .slider:focus
 {outline: none; 
-    box-shadow: 0 0 0 .1rem rgba(87, 100, 198, .2);
+    box-shadow: 0 0 0 .1rem rgba(51, 107, 135, .2);
 }
 
 .slider::-webkit-slider-thumb
-{width: .6rem; height: .6rem; margin-top: -.25rem; transition: transform .2s ease; border: 0; border-radius: 50%; background: #5764c6; 
+{width: .6rem; height: .6rem; margin-top: -.25rem; transition: transform .2s ease; border: 0; border-radius: 50%; background: #336b87; 
 
     -webkit-appearance: none;
 }
 
 .slider::-moz-range-thumb
 {width: .6rem; height: .6rem; transition: transform .2s ease; border: 0; border-radius: 50%; 
-    background: #5764c6;
+    background: #336b87;
 }
 
 .slider::-ms-thumb
 {width: .6rem; height: .6rem; transition: transform .2s ease; border: 0; border-radius: 50%; 
-    background: #5764c6;
+    background: #336b87;
 }
 
 .slider:active::-webkit-slider-thumb
@@ -632,41 +632,41 @@
 .slider.disabled::-webkit-slider-thumb
 {transform: scale(1); 
 
-    background: #e7e9ed;
+    background: #c2cbcc;
 }
 
 .slider:disabled::-moz-range-thumb,
 .slider.disabled::-moz-range-thumb
 {transform: scale(1); 
 
-    background: #e7e9ed;
+    background: #c2cbcc;
 }
 
 .slider:disabled::-ms-thumb,
 .slider.disabled::-ms-thumb
 {transform: scale(1); 
 
-    background: #e7e9ed;
+    background: #c2cbcc;
 }
 
 .slider::-webkit-slider-runnable-track
 {width: 100%; height: .1rem; border-radius: .1rem; 
-    background: #f0f1f4;
+    background: #cad2d3;
 }
 
 .slider::-moz-range-track
 {width: 100%; height: .1rem; border-radius: .1rem; 
-    background: #f0f1f4;
+    background: #cad2d3;
 }
 
 .slider::-ms-track
 {width: 100%; height: .1rem; border-radius: .1rem; 
-    background: #f0f1f4;
+    background: #cad2d3;
 }
 
 .slider::-ms-fill-lower
 {
-    background: #5764c6;
+    background: #336b87;
 }
 
 .timeline .timeline-item
@@ -678,7 +678,7 @@
 .timeline .timeline-item::before
 {position: absolute; top: 1.2rem; left: 11px; width: 2px; height: 100%; content: ''; 
 
-    background: #e7e9ed;
+    background: #c2cbcc;
 }
 
 .timeline .timeline-item .timeline-left
@@ -693,20 +693,20 @@
 }
 
 .timeline .timeline-item .timeline-icon
-{display: block; width: 1.2rem; height: 1.2rem; text-align: center; color: #fff; 
+{display: block; width: 1.2rem; height: 1.2rem; text-align: center; color: #f4f4ef; 
     border-radius: 50%;
 }
 
 .timeline .timeline-item .timeline-icon::before
 {position: absolute; top: .4rem; left: .4rem; display: block; width: .4rem; height: .4rem; content: ''; 
 
-    border: .1rem solid #5764c6; border-radius: 50%;
+    border: .1rem solid #336b87; border-radius: 50%;
 }
 
 .timeline .timeline-item .timeline-icon.icon-lg
 {font-size: .8rem; line-height: 1rem; 
 
-    background: #5764c6;
+    background: #336b87;
 }
 
 .timeline .timeline-item .timeline-icon.icon-lg::before
