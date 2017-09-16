@@ -7,6 +7,13 @@
 	height: 100vh;
 }
 
+@media (max-width: 900px) {
+	.big-graphic-head {
+		background-attachment: scroll;
+	} 
+}
+
+
 .big-graphic-head-text {
 	position: absolute;
 	left: 40vw;
