@@ -613,7 +613,7 @@ dl dd
 }
 
 .btn.btn-link
-{color: #f4f4ef; border-color: transparent; 
+{color: #336b87; border-color: transparent; 
     background: transparent;
 }
 
@@ -2875,6 +2875,11 @@ a.text-error:hover
 .bg-error
 {
     background: #a01d26;
+}
+
+.bg-light
+{
+    background: #f4f4ef;
 }
 
 .c-hand

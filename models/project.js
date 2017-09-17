@@ -18,6 +18,7 @@ var projectSchema = new mongoose.Schema({
 		type: mongoose.Schema.Types.ObjectId,
 		ref: 'User',
 	},
+    downloadCount: Number,
 });
 
 module.exports = mongoose.model('Project', projectSchema);

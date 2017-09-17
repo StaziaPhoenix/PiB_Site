@@ -2,45 +2,47 @@
 <% include ../partials/header %>
 <link rel='stylesheet' type='text/css' href='/css/native/projects.css'>
 
-<div class='page-header'>
-	<div class='h1 text-center text-uppercase page-header-title'>
-		Projects
+<div class='page-content'>
+	<div class='page-header'>
+		<div class='h1 text-center text-uppercase page-header-title'>
+			Projects
+		</div>
 	</div>
-</div>
 
-<div class='divider'></div>
+	<div class='divider'></div>
 
-<div class='container'>
+	<div class='container'>
 
-	<div class='columns'>
-		<p class='column col-8 col-mx-auto text-justify about-projects mt-2 p-2'>
-				Lorem ipsum dolor sit amet, ut vix solum laudem apeirian, id usu aeterno tractatos petentium, eros dicam in nec. Ut per aperiri neglegentur. Dicam ceteros albucius eum ad, labores repudiandae per ut. In vim hinc deleniti corrumpit, mel detraxit hendrerit gloriatur an. Melius mediocrem similique nec ea. Placerat constituto sed in, no alii purto scribentur duo. Ad per simul nostrud blandit, mel ex sumo aeque. Lorem ipsum dolor sit amet, ut vix solum laudem apeirian, id usu aeterno tractatos petentium, eros dicam in nec. Ut per aperiri neglegentur. Dicam ceteros albucius eum ad, labores repudiandae per ut. In vim hinc deleniti corrumpit, mel detraxit hendrerit gloriatur an. Melius mediocrem similique nec ea. Placerat constituto sed in, no alii purto scribentur duo. Ad per simul nostrud blandit, mel ex sumo aeque.
-		</p>
+		<div class='columns'>
+			<p class='column col-8 col-mx-auto text-justify about-projects mt-2 p-2'>
+					Lorem ipsum dolor sit amet, ut vix solum laudem apeirian, id usu aeterno tractatos petentium, eros dicam in nec. Ut per aperiri neglegentur. Dicam ceteros albucius eum ad, labores repudiandae per ut. In vim hinc deleniti corrumpit, mel detraxit hendrerit gloriatur an. Melius mediocrem similique nec ea. Placerat constituto sed in, no alii purto scribentur duo. Ad per simul nostrud blandit, mel ex sumo aeque. Lorem ipsum dolor sit amet, ut vix solum laudem apeirian, id usu aeterno tractatos petentium, eros dicam in nec. Ut per aperiri neglegentur. Dicam ceteros albucius eum ad, labores repudiandae per ut. In vim hinc deleniti corrumpit, mel detraxit hendrerit gloriatur an. Melius mediocrem similique nec ea. Placerat constituto sed in, no alii purto scribentur duo. Ad per simul nostrud blandit, mel ex sumo aeque.
+			</p>
 
-		<div class='column col-10 centered project-gallery'>
-			<div class='columns'>
-				<% projects.forEach(function(project) { %>
-					<div class='card'>
-						<a href='/projects/<%= project._id %>'>
-							<div class='card-image'>
-								<img class='card-image-native' src='<%= project.mainImage %>' alt='project image'>
-							</div>
+			<div class='column col-11 col-mx-auto project-gallery'>
+				<!-- <div class='columns'> -->
+					<% projects.forEach(function(project) { %>
+						<div class='card p-0'>
+							<a href='/projects/<%= project._id %>'>
+								<div class='card-image'>
+									<img class='card-image-native' src='<%= project.mainImage %>' alt='project image'>
+								</div>
 
-							<div class='card-header'>
-								<h4 class='card-title h5'><%= project.name %> </h4>
-							</div>
+								<div class='card-header'>
+									<h4 class='card-title h5'><%= project.name %> </h4>
+								</div>
 
-							<div class='card-body'>
-								<p class='card-text'><%= project.hook %></p>
-							</div>
-						</a>
-					</div>
-				<% }); %>
+								<div class='card-body'>
+									<p class='card-text'><%= project.hook %></p>
+								</div>
+							</a>
+						</div>
+					<% }); %>
+				<!-- </div> -->
 			</div>
+
 		</div>
 
 	</div>
-
-</div>
+</div> <!-- END PAGE CONTENT -->
 
 <% include ../partials/footer %>

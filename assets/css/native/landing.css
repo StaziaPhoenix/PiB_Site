@@ -1,5 +1,20 @@
+/******** OVERRIDE NAVBAR STYLING FOR LANDING PAGE ONLY ********/
+.navbar {
+	position: absolute;
+	background: transparent;
+}
+
+.navbar .btn-link, .navbar-brand {
+	color: #F4F4EF;
+}
+
+.navbar-brand:hover {
+	color: #F4F4EF;;
+}
+
+/******** OTHER ********/
 .big-graphic-head {
-	background-image: url("/images/lightbulb.jpg");
+	background-image: url('/images/lightbulb.jpg');
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: center;
@@ -20,7 +35,7 @@
 	top: 25vh;
 }
 
-.about-us {
+#about-us {
 	padding: 15px;
 	margin: 40px auto 20px auto;
 	display: flex;
@@ -28,7 +43,7 @@
 	justify-content: center;
 }
 
-.about-us img {
+#about-us img {
 	width: 23vw;
 	margin-bottom: 3%;
 	margin-right: 30px;

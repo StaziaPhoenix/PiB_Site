@@ -1,16 +1,14 @@
-.about-projects {
-
-}
-
-
 .project-gallery {
-	background-color: white;
-	padding: 20px;
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .card {
 	width: 250px;
 	margin: 15px;
+	background-color: white;
 }
 
 .card-image-native {

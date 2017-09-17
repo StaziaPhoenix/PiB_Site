@@ -42,7 +42,7 @@ router.post('/', function(req, res) {
 					// TODO Error handling o.o
 					console.log(err);
 				} else {
-					console.log("I made a new tag called " + createdTag.value);
+					console.log('I made a new tag called ' + createdTag.value);
 				}
 			});
 		});
@@ -107,7 +107,15 @@ router.post('/', function(req, res) {
 
 /* SHOW */
 router.get('/:id', function(req, res) {
-	res.send('This page will show details for a specific project');
+	Project.findById(req.params.id, function(err, project) {
+		if (err) {
+			console.log(err);
+			req.flash('error', 'Project not found');
+			res.redirect('back');
+		} else {
+			res.render('projects/show', {project: project});
+		}
+	});
 });
 
 module.exports = router;

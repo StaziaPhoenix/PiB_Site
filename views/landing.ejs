@@ -1,91 +1,96 @@
 <% include partials/head %>
-<!-- <% include partials/header %> -->
+<% include partials/header %>
 <link rel='stylesheet' type='text/css' href='/css/native/landing.css'>
 
-<div class='big-graphic-head'>
-	<div class='big-graphic-head-text'>
-		<h1><big>Learn by Building</big></h1>
-		<h5>Project in a Box. Join our movement  <i class='icon icon-arrow-down'></i></h5>
-	</div>
-</div>
-
-<div class='container'>
-	<div class='columns'>
-
-		<div class='column col-xs-12 col-sm-12 col-md-11 col-lg-11 col-xl-9 col-mx-auto text-justify about-us'>
-
-			<img class='hide-md hide-sm hide-xs' src='/images/logo_black.png'>
-
-			<div class='about-us-text'>
-				<p>Here at Project in a Box, our vision is to bring engineering back to its roots - people inventing things for the good of their community. We aim to bring interactive learning to every stage of education so that students can readily apply scientific theory to real, practical engineering applications. All of our curriculum is hands-on, and gives students something tangible to produce and take home while training them in a range of design and prototyping skillsets.</p>
-
-				<p>Our name is a relic of our roots: a team of engineering students at UC San Diego who designed our first projects, fully documented them, and put all of the materials in a kit - the box - that we could hand to a fellow student. Thus, each project is a standalone product utilizing a set of development skills that we could pass on to our fellow students with a simple box. Today, we have expanded to reach out to our greater community, but we keep the box-mentality of knowledge sharing in all of our ventures.</p>
-
-				<p>In order to serve a range of demographics, PiB is split into four divisions - poke around below to identify which division is right for you.</p>
-			</div>
-		</div> <!-- END ABOUT US -->
-	</div> <!-- END COLUMNS FOR ABOUT US -->
-
-	<div class='divider'></div>
-
-	<div class='columns'>
-		<div class='column col-xs-12 col-sm-12 col-md-11 col-lg-11 col-xl-10 col-mx-auto'>
-			<h1 class='text-center'>Divisions</h1>
-			<div class='divisions'>
-				<div class='division build-stuff'>
-					<a href='/projects'>
-						<img src='/images/build2.jpeg' class='img'>
-						<div class='overlay rounded' href>
-							<div class='h5 division-title'>Build Stuff</div>
-							<p>A repository of all our projects, with full documentation. If you’re an independent learner and want to get straight to building stuff, or want to peek at what we make, jump over here.</p>
-						</div>
-					</a>
-				</div>
-
-				<div class='division rnd'>
-					<a href='/rnd'>
-						<img src='/images/rnd.jpeg' class='img'>
-						<div class='overlay rounded' href>
-							<div class='h5 division-title'>R&D</div>
-							<p>Our college-level curriculum, targeting community colleges and universities with the aim of supporting makerspaces. Come here to learn about bringing hands-on curriculum to your campus.</p>
-						</div>
-					</a>
-				</div>
-
-				<div class='division inspire'>
-					<a href='/inspire'>
-						<img src='/images/inspire.jpeg' class='img'>
-						<div class='overlay rounded' href>
-							<div class='h5 division-title'>Inspire</div>
-							<p>Inspire targets K-12 education, including schools and extracurricular programs. Come here to view our grade-school curriculum and bring hands-on curriculum to your school.</p>
-						</div>
-					</a>
-				</div>
-
-				<div class='division launch'>
-					<a href='/launch'>
-						<img src='/images/cute_box.jpeg' class='img'>
-						<div class='overlay rounded' href>
-							<div class='h5 division-title'>Launch</div>
-							<p class='division-content'>Launch focuses on our home front: Jacobs School of Engineering. The Launch Program supports Jacobs Students as they build a set of our projects over one quarter - come here to join and start making things for credit.</p>
-				        </div>
-			        </a>
-				</div>
-
-				<div class='division partnership'>
-					<a href='/partnership'>
-						<img src='/images/build.jpeg' class='img'>
-						<div class='overlay rounded' href>
-							<div class='h5 division-title'>Partnership</div>
-							<p>Our industry-facing division, Partnership targets engineering professionals looking to partner with students for advanced projects, recruit students with building experience, and collaborate on educational events. Visit the Partnership division to explore collaboration options!</p>
-						</div>
-					</a>
-				</div>
-
-			</div> <!-- END DIVISIONS -->
+<!-- <div class='page-content'> -->
+	<div class='big-graphic-head'>
+		<div class='big-graphic-head-text'>
+			<h1><big>Learn by Building</big></h1>
+			<h5>Project in a Box. Join our movement <a href='#about-us' class='text-light'><i class='icon icon-arrow-down'></i></a></h5>
 		</div>
-	</div> <!-- END COLUMNS FOR DIVISIONS -->
+	</div>
 
-</div> <!-- CONTAINER -->
+	<div class='container'>
+
+		<div class='columns'>
+			
+			<div class='column col-xs-12 col-sm-12 col-md-11 col-lg-11 col-xl-9 col-mx-auto text-justify' id='about-us'>
+
+				<img class='hide-md hide-sm hide-xs' src='/images/logo_black.png'>
+
+				<div id='about-us-text'>
+					<h2 class='text-center'>What is Project in a Box?</h2>
+					<p>Here at Project in a Box, our vision is to bring engineering back to its roots - people inventing things for the good of their community. We aim to bring interactive learning to every stage of education so that students can readily apply scientific theory to real, practical engineering applications. All of our curriculum is hands-on, and gives students something tangible to produce and take home while training them in a range of design and prototyping skillsets.</p>
+
+					<p>Our name is a relic of our roots: a team of engineering students at UC San Diego who designed our first projects, fully documented them, and put all of the materials in a kit - the box - that we could hand to a fellow student. Thus, each project is a standalone product utilizing a set of development skills that we could pass on to our fellow students with a simple box. Today, we have expanded to reach out to our greater community, but we keep the box-mentality of knowledge sharing in all of our ventures.</p>
+
+					<p>In order to serve a range of demographics, PiB is split into four divisions - poke around below to identify which division is right for you.</p>
+				</div>
+			</div> <!-- END ABOUT US -->
+		</div> <!-- END COLUMNS FOR ABOUT US -->
+
+		<div class='divider'></div>
+
+		<div class='columns'>
+			<div class='column col-xs-12 col-sm-12 col-md-11 col-lg-11 col-xl-10 col-mx-auto'>
+				<h1 class='text-center'>Divisions</h1>
+				<div class='divisions'>
+					<div class='division build-stuff'>
+						<a href='/projects'>
+							<img src='/images/build2.jpeg' class='img'>
+							<div class='overlay rounded' href>
+								<div class='h5 division-title'>Build Stuff</div>
+								<p>A repository of all our projects, with full documentation. If you’re an independent learner and want to get straight to building stuff, or want to peek at what we make, jump over here.</p>
+							</div>
+						</a>
+					</div>
+
+					<div class='division rnd'>
+						<a href='/rnd'>
+							<img src='/images/rnd.jpeg' class='img'>
+							<div class='overlay rounded' href>
+								<div class='h5 division-title'>R&D</div>
+								<p>Our college-level curriculum, targeting community colleges and universities with the aim of supporting makerspaces. Come here to learn about bringing hands-on curriculum to your campus.</p>
+							</div>
+						</a>
+					</div>
+
+					<div class='division inspire'>
+						<a href='/inspire'>
+							<img src='/images/inspire.jpeg' class='img'>
+							<div class='overlay rounded' href>
+								<div class='h5 division-title'>Inspire</div>
+								<p>Inspire targets K-12 education, including schools and extracurricular programs. Come here to view our grade-school curriculum and bring hands-on curriculum to your school.</p>
+							</div>
+						</a>
+					</div>
+
+					<div class='division launch'>
+						<a href='/launch'>
+							<img src='/images/cute_box.jpeg' class='img'>
+							<div class='overlay rounded' href>
+								<div class='h5 division-title'>Launch</div>
+								<p class='division-content'>Launch focuses on our home front: Jacobs School of Engineering. The Launch Program supports Jacobs Students as they build a set of our projects over one quarter - come here to join and start making things for credit.</p>
+					        </div>
+				        </a>
+					</div>
+
+					<div class='division partnership'>
+						<a href='/partnership'>
+							<img src='/images/build.jpeg' class='img'>
+							<div class='overlay rounded' href>
+								<div class='h5 division-title'>Partnership</div>
+								<p>Our industry-facing division, Partnership targets engineering professionals looking to partner with students for advanced projects, recruit students with building experience, and collaborate on educational events. Visit the Partnership division to explore collaboration options!</p>
+							</div>
+						</a>
+					</div>
+
+				</div> <!-- END DIVISIONS -->
+			</div>
+		</div> <!-- END COLUMNS FOR DIVISIONS -->
+
+	</div> <!-- CONTAINER -->
+	
+<!-- </div> -->
 
 <% include partials/footer %>

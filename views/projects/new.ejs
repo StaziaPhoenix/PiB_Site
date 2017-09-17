@@ -2,187 +2,190 @@
 <% include ../partials/header %>
 <link rel="stylesheet" type="text/css" href="/css/native/forms.css">
 
-<br><br>
-<h3 class='text-center'>Add Your Project</h3>
+<div class='page-content'>
+	<h1 class='text-center'>Add Your Project</h1>
 
-<div class='container page-content'>
-	<div class='columns'>
-		<form class='column col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-6 centered' action='/projects' method='post'>
+	<div class='container'>
+		<div class='columns'>
+			<form class='column col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-6 centered' action='/projects' method='post'>
 
-			<div class='columns'>
-				<!-- NAME -->
-				<div class='column form-group'>
-					<label class='form-label' for='name'>Name</label>
-					<input class='form-input' type='text' id='name' name='project[name]' placeholder='Binary Clock'>
-				</div>
-
-				<!-- CREATORS -->
-				<div class='column form-group'>
-					<label class='form-label popover popover-right' for='name'>Creators				<div class='popover-container'>
-							<div class='card'>
-								<div class='card-body'>Just list names, separated by commas. We'll take care of the rest.</div>
-							</div>
-						</div>
-					</label>
-					<input class='form-input' type='text' id='creators' name='project[creators]' placeholder='MrSwirlyEyes, Stitch'>
-				</div>
-			</div>
-
-			<!-- MAIN IMAGE -->
-			<div class='form-group'>
-				<label class='form-label popover popover-right' for='main-image'>Main Image (URL)
-					<div class='popover-container'>
-						<div class='card'>
-							<div class='card-body'>All of our project images should be public on instagram or facebook - go grab their links and we'll use them here.</div>
-						</div>
+				<div class='columns'>
+					<!-- NAME -->
+					<div class='column form-group'>
+						<label class='form-label' for='name'>Name</label>
+						<input class='form-input' type='text' id='name' name='project[name]' placeholder='Binary Clock'>
 					</div>
-				</label>
-				<input class='form-input' type='text' id='main-image' name='project[mainImage]'>
-			</div>
 
-			<!-- OTHER MEDIA -->
-			<!-- todo other media -->
-
-			<!-- HOOK -->
-			<div class='form-group'>
-				<label class='form-label' for='hook'>Hook<br><small>This is a <em>short</em> description of the project. Less than 150 characters please.</small></label>
-				<input class='form-input' type='text' id='hook' name='project[hook]' placeholder="It's one thing to own a binary clock. It's another level of nerd to build one." maxlength='150'>
-			</div>
-
-			<!-- FULL DESCRIPTION -->
-			<div class='form-group'>
-				<label class='form-label' for='description'>Description<br><small>This is the full description. No length limit (though more than one paragraph may be excessive). Talk about what the final product is, what they'll learn. Think about how you'd talk about the project if you were presenting it at an interview.</small></label>
-				<textarea class='form-input' id='description' name='project[description]' placeholder='Spicy jalapeno bacon ipsum dolor amet laborum tenderloin shankle dolor lorem pancetta consectetur id prosciutto pastrami. Dolor capicola magna fugiat, laboris culpa biltong pariatur minim nisi. Nisi incididunt consectetur, strip steak ex dolore ullamco biltong veniam swine sed fatback. Doner picanha andouille tongue veniam tail meatball salami shankle. Sirloin laboris dolore consequat, in chicken ball tip short loin officia salami mollit magna prosciutto. Burgdoggen pork anim ham hock pork belly. Laborum id kielbasa, fugiat aliquip meatloaf cupidatat ullamco et pork kevin ham.' rows='8'></textarea>
-			</div>
-
-			<!-- SKILLS LEARNED AND TAGS ROW -->
-			<div class='columns'>
-				<!-- SKILLS LEARNED -->
-				<div class='column form-group'>
-					<label class='form-label'>Skills Learned</label>
-					
-					<div class='panel' id='skill-panel'>
-						<div class='panel-header'>
-							<input type='text' class='form-input' id='skill-input' onkeyup='checkEnter_Skill(event, this)'>
-							<div class='toast hidden' id='skills-learned-hint'>
+					<!-- CREATORS -->
+					<div class='column form-group'>
+						<label class='form-label popover popover-right' for='name'>Creators
+							<div class='popover-container'>
+								<div class='card'>
+									<div class='card-body'>Just list names, separated by commas. We'll take care of the rest.</div>
+								</div>
 							</div>
-						</div>
-
-						<div class='panel-body' id='skill-list'></div>
-						<div class='panel-footer'></div>
+						</label>
+						<input class='form-input' type='text' id='creators' name='project[creators]' placeholder='MrSwirlyEyes, Stitch'>
 					</div>
-					<input type='text' name='skillsLearned' id='skills-learned' hidden>
 				</div>
 
-				<!-- TAGS -->
-				<div class='column form-group'>
-					<label class='form-label popover popover-right'>Tags
+				<!-- MAIN IMAGE -->
+				<div class='form-group'>
+					<label class='form-label popover popover-right' for='main-image'>Main Image (URL)
 						<div class='popover-container'>
 							<div class='card'>
-								<div class='card-body'>Tags are tools or resources that students need in order to complete the project.</div>
+								<div class='card-body'>All of our project images should be public on instagram or facebook - go grab their links and we'll use them here.</div>
 							</div>
 						</div>
 					</label>
-					<div class='panel' id='tag-panel'>
-						<div class='panel-header'>Select all that apply</div>
+					<input class='form-input' type='text' id='main-image' name='project[mainImage]'>
+				</div>
 
-						<div class='panel-body'>
-							<span class='chip c-hand' onclick='selectTag(this)'><span>EagleCAD</span></span>
-							<span class='chip c-hand' onclick='selectTag(this)'><span>3D Printer</span></span>
-							<span class='chip c-hand' onclick='selectTag(this)'><span>Laser Cutter</span></span>
+				<!-- OTHER MEDIA -->
+				<!-- todo other media -->
+
+				<!-- HOOK -->
+				<div class='form-group'>
+					<label class='form-label' for='hook'>Hook<br><small>This is a <em>short</em> description of the project. Less than 150 characters please.</small></label>
+					<input class='form-input' type='text' id='hook' name='project[hook]' placeholder="It's one thing to own a binary clock. It's another level of nerd to build one." maxlength='150'>
+				</div>
+
+				<!-- FULL DESCRIPTION -->
+				<div class='form-group'>
+					<label class='form-label' for='description'>Description<br><small>This is the full description. No length limit (though more than one paragraph may be excessive). Talk about what the final product is, what they'll learn. Think about how you'd talk about the project if you were presenting it at an interview.</small></label>
+					<textarea class='form-input' id='description' name='project[description]' placeholder='Spicy jalapeno bacon ipsum dolor amet laborum tenderloin shankle dolor lorem pancetta consectetur id prosciutto pastrami. Dolor capicola magna fugiat, laboris culpa biltong pariatur minim nisi. Nisi incididunt consectetur, strip steak ex dolore ullamco biltong veniam swine sed fatback. Doner picanha andouille tongue veniam tail meatball salami shankle. Sirloin laboris dolore consequat, in chicken ball tip short loin officia salami mollit magna prosciutto. Burgdoggen pork anim ham hock pork belly. Laborum id kielbasa, fugiat aliquip meatloaf cupidatat ullamco et pork kevin ham.' rows='8'></textarea>
+				</div>
+
+				<!-- SKILLS LEARNED AND TAGS ROW -->
+				<div class='columns'>
+					<!-- SKILLS LEARNED -->
+					<div class='column form-group'>
+						<label class='form-label'>Skills Learned</label>
+						
+						<div class='panel' id='skill-panel'>
+							<div class='panel-header'>
+								<input type='text' class='form-input' id='skill-input' onkeyup='checkEnter_Skill(event, this)'>
+								<div class='toast hidden' id='skills-learned-hint'>
+								</div>
+							</div>
+
+							<div class='panel-body' id='skill-list'></div>
+							<div class='panel-footer'></div>
 						</div>
-						<div class='panel-footer input-group'>
-							<input type='text' class='form-input' id='new-tag-input' onkeyup='checkEnter_Tag(event, this)'>
-							<span class='btn btn-primary input-group-btn' onclick='checkEnter_Tag(event, this)'><i class='icon icon-check'></i></span>
-						</div>
-						<div class='modal' id='new-tag-warning-modal'>
-						 	<div class='modal-overlay'></div>
-						 	<div class='modal-container' onfocusout='closeModal(event, this)' tabindex='-1'>
-								<div class='modal-header'>
-						    		<div class='modal-title h3'>Warning</div>
-						    	</div>
-						    	<div class="modal-body">
-						    		<p>When you add your project, this new tag will be added to our database so that builders can use it to filter projects, and other tutors can add it to their projects.</p>
-						    		<p>If you add a tag which is redundant, misspelled, or otherwise not meaningful, you compromise the usefulness of our site. That's not fun.</p>
-						    		<label class='form-switch'>
-						    			<input type='checkbox'>
-						    			<i class='form-icon'></i> I understand, and acknowledge that if I mess up our database with this tag, Stazia will be pissed AF.
-						    		</label>
-						    	</div>
-						    	<div class='modal-footer'>
-						    		<span class='btn disabled' id='add-tag-btn' onclick='addNewTag()'>Add Tag</span>
-						    	</div>
-						 	</div>
-						</div> <!-- END MODAL -->
+						<input type='text' name='skillsLearned' id='skills-learned' hidden>
 					</div>
-					<input type='text' name='newTags' id='new-tags' hidden>
-					<input type='text' name='tags' id='tags' hidden>
-				</div> <!-- END TAGS -->
-			</div>
 
-			<!-- DIVISION AND SEQUENCE ROW -->
-			<div class='columns'>
-				<!-- DIVISION -->
-				<div class='column form-group'>
-					<label class='form-label' for='division'>Division</label>
-					<select class='form-select' id='division' name='project[division]'>
-						<option>R&D</option>
-						<option>Inspire</option>
-						<option>Partnership</option>
-						<option>Launch</option>
-					</select>
-				</div>
-
-				<!-- SEQUENCE -->
-				<div class='column form-group'>
-					<label class='form-label' for='sequence'>Sequence</label>
-					<div class='panel' id='tag-panel'>
-						<div class='panel-header'>
-							<div class='has-icon-left'>
-								<input class='form-input' type='text' name='newSequence' placeholder='New Sequence'>
-								<i class="form-icon icon icon-plus"></i>
+					<!-- TAGS -->
+					<div class='column form-group'>
+						<label class='form-label popover popover-right'>Tags
+							<div class='popover-container'>
+								<div class='card'>
+									<div class='card-body'>Tags are tools or resources that students need in order to complete the project.</div>
+								</div>
 							</div>
+						</label>
+						<div class='panel' id='tag-panel'>
+							<div class='panel-header'>Select all that apply</div>
+
+							<div class='panel-body'>
+								<span class='chip c-hand' onclick='selectTag(this)'><span>EagleCAD</span></span>
+								<span class='chip c-hand' onclick='selectTag(this)'><span>3D Printer</span></span>
+								<span class='chip c-hand' onclick='selectTag(this)'><span>Laser Cutter</span></span>
+							</div>
+							<div class='panel-footer input-group'>
+								<input type='text' class='form-input' id='new-tag-input' onkeyup='checkEnter_Tag(event, this)'>
+								<span class='btn btn-primary input-group-btn' onclick='checkEnter_Tag(event, this)'><i class='icon icon-check'></i></span>
+							</div>
+							<div class='modal' id='new-tag-warning-modal'>
+							 	<div class='modal-overlay'></div>
+							 	<div class='modal-container' onfocusout='closeModal(event, this)' tabindex='-1'>
+									<div class='modal-header'>
+							    		<div class='modal-title h3'>Warning</div>
+							    	</div>
+							    	<div class="modal-body">
+							    		<p>When you add your project, this new tag will be added to our database so that builders can use it to filter projects, and other tutors can add it to their projects.</p>
+							    		<p>If you add a tag which is redundant, misspelled, or otherwise not meaningful, you compromise the usefulness of our site. That's not fun.</p>
+							    		<label class='form-switch'>
+							    			<input type='checkbox'>
+							    			<i class='form-icon'></i> I understand, and acknowledge that if I mess up our database with this tag, Stazia will be pissed AF.
+							    		</label>
+							    	</div>
+							    	<div class='modal-footer'>
+							    		<span class='btn disabled' id='add-tag-btn' onclick='addNewTag()'>Add Tag</span>
+							    	</div>
+							 	</div>
+							</div> <!-- END MODAL -->
 						</div>
-
-						<div class='divider text-center' data-content='OR'></div>
-
-						<div class='panel-body'>
-							<input class='form-input' list='sequences' placeholder='Add to an existing sequence' name='project[sequence]'>
-							  <datalist id='sequences'>
-								<% sequences.forEach(function (sequence) { %>
-									<option value='<%= sequence.name %>'>
-								<% }) %>
-							  </datalist> 
-						</div>
-
-						<div class='panel-footer'></div>
-
-					</div> <!-- END PANEL -->
-
-<!-- 					<label class='form-radio'>
-						<input type='radio' name='project[sequence]' value='new' checked>
-						<i class="form-icon"></i><i class="icon icon-plus"></i>New: 
-					</label>
-					<label class="form-radio">
-						<input type='radio' name='project[sequence]' value='blck'>
-						<i class="form-icon"></i> Binary Clock
-					</label>
-					<label class="form-radio">
-						<input type='radio' name='project[sequence]' value='guitar'>
-						<i class="form-icon"></i> Guitar Effects Pedals
-					</label>
-					<label class="form-radio">
-						<input type='radio' name='project[sequence]' value='roboarm'>
-						<i class="form-icon"></i> Robotic Arm
-					</label>
- -->
-					
+						<input type='text' name='newTags' id='new-tags' hidden>
+						<input type='text' name='tags' id='tags' hidden>
+					</div> <!-- END TAGS -->
 				</div>
-			</div>
 
-			<input type='button' class='btn btn-primary' value='Add Project' onclick="_submit()">
-		</form>
+				<!-- DIVISION AND SEQUENCE ROW -->
+				<div class='columns'>
+					<!-- DIVISION -->
+					<div class='column form-group'>
+						<label class='form-label' for='division'>Division</label>
+						<select class='form-select' id='division' name='project[division]'>
+							<option>R&D</option>
+							<option>Inspire</option>
+							<option>Partnership</option>
+							<option>Launch</option>
+						</select>
+					</div>
+
+					<!-- SEQUENCE -->
+					<div class='column form-group'>
+						<label class='form-label' for='sequence'>Sequence</label>
+						<div class='panel' id='tag-panel'>
+							<div class='panel-header'>
+								<div class='has-icon-left'>
+									<input class='form-input' type='text' name='newSequence' placeholder='New Sequence'>
+									<i class="form-icon icon icon-plus"></i>
+								</div>
+							</div>
+
+							<div class='divider text-center' data-content='OR'></div>
+
+							<div class='panel-body'>
+								<input class='form-input' list='sequences' placeholder='Add to an existing sequence' name='project[sequence]'>
+								  <datalist id='sequences'>
+									<% sequences.forEach(function (sequence) { %>
+										<option value='<%= sequence.name %>'>
+									<% }) %>
+								  </datalist> 
+							</div>
+
+							<div class='panel-footer'></div>
+
+						</div> <!-- END PANEL -->
+
+	<!-- 					<label class='form-radio'>
+							<input type='radio' name='project[sequence]' value='new' checked>
+							<i class="form-icon"></i><i class="icon icon-plus"></i>New: 
+						</label>
+						<label class="form-radio">
+							<input type='radio' name='project[sequence]' value='blck'>
+							<i class="form-icon"></i> Binary Clock
+						</label>
+						<label class="form-radio">
+							<input type='radio' name='project[sequence]' value='guitar'>
+							<i class="form-icon"></i> Guitar Effects Pedals
+						</label>
+						<label class="form-radio">
+							<input type='radio' name='project[sequence]' value='roboarm'>
+							<i class="form-icon"></i> Robotic Arm
+						</label>
+	 -->
+						
+					</div>
+				</div>
+
+				<input type='button' class='btn btn-primary' value='Add Project' onclick="_submit()">
+			</form>
+		</div>
 	</div>
+
 </div>
 
 <script type="text/javascript" src='/js/forms.js'></script>
