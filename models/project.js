@@ -2,7 +2,7 @@ var mongoose    =   require('mongoose');
 
 var projectSchema = new mongoose.Schema({
     name: String,
-    creators: [String],
+    creators: String,
     mainImage: String,
     media: [String],
     hook: String,

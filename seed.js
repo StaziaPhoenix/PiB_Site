@@ -10,7 +10,7 @@ var	sequence = {
 var	projects = [
 					{
 						name: "ATTiny Programmer",
-						creators: ["Colin 'MrSwirlyEyes' Keef"],
+						creators: "Colin 'MrSwirlyEyes' Keef",
 						mainImage: "/images/attinyMain.JPG",
 						media: ["/images/attiny1.jpg"],
 						hook: "Suspendisse malesuada congue sodales.",
@@ -21,7 +21,7 @@ var	projects = [
 					},
 					{
 						name: "Programmable Heart",
-						creators: ["Colin 'MrSwirlyEyes' Keef"],
+						creators: "Colin 'MrSwirlyEyes' Keef",
 						mainImage: "/images/heartMain.JPG",
 						media: ["/images/heart1.jpg"],
 						hook: "In hac habitasse platea dictumst.",
@@ -32,7 +32,7 @@ var	projects = [
 					},
 					{
 						name: "Binary Clock",
-						creators: ["Colin 'MrSwirlyEyes' Keef"],
+						creators: "Colin 'MrSwirlyEyes' Keef",
 						mainImage: "/images/clockMain.JPG",
 						media: ["/images/clock1.jpg", "/images/clock2.jpg"],
 						hook: "Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus.",

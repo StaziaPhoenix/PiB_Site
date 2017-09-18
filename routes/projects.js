@@ -53,7 +53,7 @@ router.post('/', function(req, res) {
 	/* Prep new project */
 	var newProject = {
 		name: req.body.project.name,
-		creators: req.body.project.creators.split(','),
+		creators: req.body.project.creators,
 		mainImage: req.body.project.mainImage,
 		hook: req.body.project.hook,
 		description: req.body.project.description,
