@@ -113,7 +113,15 @@ router.get('/:id', function(req, res) {
 			req.flash('error', 'Project not found');
 			res.redirect('back');
 		} else {
-			res.render('projects/show', {project: project});
+			Project.find({sequence: project.sequence}, function (err, relatedProjects) {
+				if (err) {
+					console.log(err);
+					req.flash('error', 'Project not found');
+					res.redirect('back');
+				} else {
+					res.render('projects/show', {project: project, relatedProjects: relatedProjects});
+				}
+			});
 		}
 	});
 });

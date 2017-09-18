@@ -2,4 +2,42 @@
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
+	margin-bottom: 1.6rem;
+	flex-wrap: nowrap;
+}
+
+@media (max-width: 840px) {
+	.project-info-and-media {
+		flex-wrap: wrap;
+		text-align: center;
+	}
+
+	.media-gallery {
+		width: 100%;
+		margin: .4rem;
+	}
+}
+
+.media-gallery {
+	/*border: 1px solid black;*/
+	margin-left: 1.6rem;
+	align-self: center;
+	max-width: 375px;
+	min-width: 375px;
+	height: 300px;
+	overflow: scroll;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.media-gallery img {
+	/*display: inline-block;*/
+	width: 60%;
+	/*margin: auto;*/
+}
+
+.skills-learned, .related-projects {
+	margin-bottom: 1.6rem;
 }

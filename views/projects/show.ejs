@@ -8,7 +8,7 @@
 	<div class='container'>
 		<!-- ROW: DESCRIPTION AND MEDIA GALLERY -->
 		<div class='columns'>
-			<div class='column col-9 col-mx-auto project-info-and-media'>
+			<div class='column col-xs-12 col-sm-12 col-md-12 col-lg-11 col-xl-9 col-mx-auto project-info-and-media'>
 			<!-- project-info-and-media is a flex box containing project-info and media-gallery -->
 
 				<!-- PROJECT DESCRIPTION -->
@@ -19,7 +19,7 @@
 						</div>
 						<p class='text-gray'>
 							<% project.creators.forEach(function(creator) { %>
-								<%= creator %>  | 
+								<%= creator %>
 							<% }); %>
 						</p>
 					</div>
@@ -31,8 +31,10 @@
 				</div>
 
 				<!-- MEDIA GALLERY -->
-				<div class='media-gallery p-2'>
-					
+				<div class='media-gallery'>
+					<i class='icon icon-arrow-left m-2'></i>
+					<img src='<%= project.mainImage %>'>
+					<i class='icon icon-arrow-right m-2'></i>
 				</div><!-- END MEDIA-GALLERY -->
 
 			</div> <!-- END PROJECT-INFO-AND-MEDIA -->
@@ -40,23 +42,36 @@
 
 		<!-- ROW: SKILLS LEARNED AND RELATED PROJECTS -->
 		<div class='columns'>
-			<div class='column col-4 col-mx-auto skills-learned'>
-				<h5>Skills Learned</h5>
-				<ul>
-					<% project.skillsLearned.forEach(function(skill) { %>
-						<li><%= skill %></li>
-					<% }); %>
-				</ul>
-			</div>
+			<div class='column col-xs-12 col-sm-12 col-md-12 col-lg-11 col-xl-9 col-mx-auto skills-and-related-projects'>
+				<div class='columns m-2'>
+					<div class='column col-xs-12 col-sm-12 col-6 skills-learned'>
+						<h5>Skills Learned</h5>
+						<ul>
+							<% project.skillsLearned.forEach(function(skill) { %>
+								<li><%= skill %></li>
+							<% }); %>
+						</ul>
+					</div>
 
-			<div class='column col-4 col-mx-auto related-projects'>
-				<h5>Related Projects</h5>
+					<div class='column col-xs-12 col-sm-12 col-6 related-projects'>
+						<h5>Related Projects</h5>
+						<ul>
+							<% relatedProjects.forEach(function(project) { %>
+								<li><a href='/projects/<%= project._id %>'><%= project.name %></a></li>
+							<% }); %>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 
 
 		<!-- BUILD IT BUTTON -->
-		<div class='btn btn-primary'>Build It</div>
+		<div class='columns'>
+			<div class='column col-xs-12 col-sm-12 col-md-12 col-lg-11 col-xl-9 col-mx-auto'>
+				<div class='btn btn-primary m-2'>Build It</div>
+			</div>
+		</div>
 	</div>
 
 </div>
