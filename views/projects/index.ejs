@@ -28,7 +28,13 @@
 								</div>
 
 								<div class='card-header'>
-									<h4 class='card-title h5'><%= project.name %> </h4>
+									<h4 class='card-title h5'><%= project.name %></h4>
+									<div class='text-center text-gray'>
+										<button class='btn btn-primary btn-sm c-auto'>
+											<i class='icon icon-download'></i>
+										</button>
+										<%= project.downloadCount %>
+									</div>
 								</div>
 
 								<div class='card-body'>

@@ -17,7 +17,8 @@ var	projects = [
 						description: "Maecenas et neque fermentum, euismod dolor in, porttitor justo. Curabitur metus diam, laoreet vel nisi sed, pharetra viverra enim. Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus. Suspendisse malesuada congue sodales. In hac habitasse platea dictumst. Suspendisse mollis facilisis neque quis dignissim. Nullam libero turpis, commodo at elementum a, volutpat ut odio.",
 						skillsLearned: ["PCB Design", "Arduino", "Embedded Chips", "Soldering", "C Programming"],
 						tags: ["Soldering", "EagleCAD"],
-						division: "R&D"
+						division: "R&D",
+						downloadCount: 9
 					},
 					{
 						name: "Programmable Heart",
@@ -28,7 +29,8 @@ var	projects = [
 						description: "Maecenas et neque fermentum, euismod dolor in, porttitor justo. Curabitur metus diam, laoreet vel nisi sed, pharetra viverra enim. Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus. Suspendisse malesuada congue sodales. In hac habitasse platea dictumst. Suspendisse mollis facilisis neque quis dignissim. Nullam libero turpis, commodo at elementum a, volutpat ut odio.",					
 						skillsLearned: ["PCB Design", "Arduino", "Embedded Chips", "Soldering", "C Programming"],
 						tags: ["Soldering", "EagleCAD"],
-						division: "R&D"			
+						division: "R&D",
+						downloadCount: 43
 					},
 					{
 						name: "Binary Clock",
@@ -39,7 +41,8 @@ var	projects = [
 						description: "Maecenas et neque fermentum, euismod dolor in, porttitor justo. Curabitur metus diam, laoreet vel nisi sed, pharetra viverra enim. Vivamus sagittis, velit eu accumsan commodo, felis sem lacinia velit, vel blandit ligula nibh sit amet risus. Suspendisse malesuada congue sodales. In hac habitasse platea dictumst. Suspendisse mollis facilisis neque quis dignissim. Nullam libero turpis, commodo at elementum a, volutpat ut odio.",
 						skillsLearned: ["PCB Design", "Arduino", "Embedded Chips", "Soldering", "C Programming"],
 						tags: ["Soldering", "EagleCAD"],
-						division: "R&D"
+						division: "R&D",
+						downloadCount: 572
 					}
 				];
 
