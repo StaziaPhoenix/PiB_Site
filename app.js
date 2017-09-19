@@ -1,12 +1,14 @@
 var	express			=	require('express'),
 	app				=	express(),
-	bodyParser		=	require('body-parser'),
+	// bodyParser		=	require('body-parser'),
 	passport		=	require('passport'),
 	LocalStrategy	=	require('passport-local'),
 	methodOverride	=	require('method-override'),
 	mongoose		=	require('mongoose'),
 	flash			=	require('connect-flash'),
 	helmet			=	require('helmet'),
+	// busboy			=	require('express-busboy'),
+	multer			=	require('multer'),
 	dotenv			=	require('dotenv');
 
 var	User			=	require('./models/user');
@@ -17,7 +19,9 @@ var	projectRoutes	=	require('./routes/projects'),
 
 /******** THINGS TO USE ********/
 app.set('port', (process.env.PORT || 3000));
-app.use(bodyParser.urlencoded({extended: true}));
+// app.use(bodyParser.urlencoded({extended: true}));
+app.use(multer({ dest: __dirname + '/uploads/'}).any());
+
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/assets'));
 app.use(methodOverride('_method'));

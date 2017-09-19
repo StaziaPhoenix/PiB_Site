@@ -19,6 +19,7 @@ var projectSchema = new mongoose.Schema({
 		ref: 'User',
 	},
     downloadCount: Number,
+    documentation: String,
 });
 
 module.exports = mongoose.model('Project', projectSchema);

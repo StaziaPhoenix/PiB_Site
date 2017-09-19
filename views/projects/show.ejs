@@ -37,7 +37,7 @@
 				<!-- MEDIA GALLERY -->
 				<div class='media-gallery'>
 					<i class='icon icon-arrow-left m-2'></i>
-					<img src='<%= project.mainImage %>'>
+					<img src='/project-files/<%= project._id %>/<%= project.mainImage %>'>
 					<i class='icon icon-arrow-right m-2'></i>
 				</div><!-- END MEDIA-GALLERY -->
 
@@ -73,7 +73,7 @@
 		<!-- BUILD IT BUTTON -->
 		<div class='columns'>
 			<div class='column col-xs-12 col-sm-12 col-md-12 col-lg-11 col-xl-9 col-mx-auto'>
-				<div class='btn btn-primary m-2'>Build It</div>
+				<a class='btn btn-primary m-2' href='/projects/download/<%= project._id %>/<%= project.documentation %>'>Build It</a>
 			</div>
 		</div>
 	</div>

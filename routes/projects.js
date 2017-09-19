@@ -1,5 +1,7 @@
 var express		= require('express'),
 	router		= express.Router(),
+	fs			= require('fs'),
+	exec		= require('child_process').exec,
 	Project		= require('../models/project'),
 	Tag			= require('../models/tag'),
 	Sequence	= require('../models/sequence');
@@ -30,11 +32,9 @@ router.get('/new', function(req, res) {
 
 /* CREATE */
 router.post('/', function(req, res) {
-	console.log(req.body);
 
 	/* Add new tag to tag collection, if newTags is not empty */
 	var newTags = req.body.newTags.split('|');
-	console.log(newTags);
 	if (newTags.length > 1 || (newTags.length === 1 && newTags[0] != '')) { // check for empty
 		newTags.forEach(function(tag) {
 			Tag.create({value: tag}, function (err, createdTag) {
@@ -54,15 +54,13 @@ router.post('/', function(req, res) {
 	var newProject = {
 		name: req.body.project.name,
 		creators: req.body.project.creators,
-		mainImage: req.body.project.mainImage,
 		hook: req.body.project.hook,
 		description: req.body.project.description,
 		skillsLearned: req.body.skillsLearned.split('|'),
 		tags: req.body.tags.split('|'),
-		division: req.body.project.division
+		division: req.body.project.division,
+		downloadCount: 0
 	};
-
-	console.log(newProject);
 
 	// Bind the project to a sequence
 		// search for the sequence name - if found, bind, if not, create and bind
@@ -79,30 +77,26 @@ router.post('/', function(req, res) {
 					res.redirect('back');
 				} else {
 					newProject.sequence = sequence;
-					Project.create(newProject, function (err, project) {
-						if (err) {
-							console.log(err);
-							req.flash('error', 'There was an error adding your project...');
-							res.redirect('back');
-						} else {
-							res.redirect('/projects/' + project._id);
-						}
+					Project.create(newProject, function(err, project) {
+						createProject(err, project, req.files);
+						res.redirect('/projects/' + project._id);
 					});
 				}
 			});
 		} else { // add project to found
 			newProject.sequence = found;
-			Project.create(newProject, function (err, project) {
-				if (err) {
-					console.log(err);
-					req.flash('error', 'There was an error adding your project...');
-					res.redirect('back');
-				} else {
-					res.redirect('/projects/' + project._id);
-				}
+			Project.create(newProject, function(err, project) {
+				createProject(err, project, req.files);
+				res.redirect('/projects/' + project._id);
 			});
 		}
 	});
+});
+
+/* DOWNLOAD DOCUMENTATION */
+router.get('/download/:id/:documentation', function(req, res) {
+	var path = __dirname + '/../assets/project-files/' + req.params.id + '/' + req.params.documentation;
+	res.download(path);
 });
 
 /* SHOW */
@@ -125,5 +119,60 @@ router.get('/:id', function(req, res) {
 		}
 	});
 });
+
+
+/******** HELPERS ********/
+
+function createProject(err, project, files) {
+	if (err) {
+		console.log(err);
+		req.flash('error', 'There was an error adding your project...');
+		return;
+	}
+	/* Put away media and documentation files */
+	var dirname = __dirname + '/../assets/project-files/' + project._id;
+	var mkdir = 'mkdir -p ' + dirname;
+	exec(mkdir, function (err, stdout, stderr) {
+		if (err) {
+			console.log("ERROR WITH EXEC");
+			return;
+		}
+
+		/* WRITE THE FILES INTO THEIR FOLDER */
+		files.forEach(function(file) {
+			fs.readFile(file.path, function(err, data) {
+				if (err) {
+					console.log("PROBLEM READING FILE");
+				} else {
+					var destination = dirname + '/' + file.originalname;
+					fs.writeFile(destination, data, function(err) {
+						if (err) {
+							console.log("COULDN'T WRITE THE FILE");
+						}
+					});
+				}
+			});
+		});
+
+		/* UPDATE PROJECT OBJECT WITH THE PATHS */
+		// mainImage is the first file
+		project.mainImage = files[0].originalname;
+
+		// everything in between is other media
+		for (var i = 1; i < files.length - 1; i++) {
+			project.media.push(files[i].originalname);
+		}
+
+		// documentation is the last file
+		project.documentation = files[files.length-1].originalname;
+
+		Project.findByIdAndUpdate(project._id, project, function(err, project) {
+			if (err) {
+				console.log("ERROR WRITING FILE PATHS TO PROJECT");
+				console.log(err);
+			}
+		});
+	});
+}
 
 module.exports = router;
