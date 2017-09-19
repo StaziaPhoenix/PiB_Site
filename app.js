@@ -51,8 +51,8 @@ app.use('/projects', projectRoutes);
 /******** PASSPORT ********/
 
 /******** SEED DATABASE DURING DEVELOPMENT ********/
-// var seedDB = require('./seed');
-// seedDB();
+var seedDB = require('./seed');
+seedDB();
 
 
 app.listen(app.get('port'), function() {

@@ -55,31 +55,31 @@ function seedDB() {
 		}
 
 		Project.remove({}, function(err) {
-			if (err) {
-				return console.log(err);
-			}
+			// if (err) {
+			// 	return console.log(err);
+			// }
 
-			// create sequence
-			Sequence.create(sequence, function(err, sequence) {
-				if (err) {
-					return console.log(err);
-				} 
-				console.log("Added sequence " + sequence.name);
+			// // create sequence
+			// Sequence.create(sequence, function(err, sequence) {
+			// 	if (err) {
+			// 		return console.log(err);
+			// 	} 
+			// 	console.log("Added sequence " + sequence.name);
 
-				console.log(sequence);
+			// 	console.log(sequence);
 
-				// add projects
-				projects.forEach(function(project) {
-					project.sequence = sequence;
-					Project.create(project, function(err, projectReturned) {
-						if (err) {
-							console.log(err);
-						} else {
-							console.log("Saved project " + projectReturned.name + " to " + sequence.name);
-						}
-					});
-				});
-			}); // end SEQUENCE create
+			// 	// add projects
+			// 	projects.forEach(function(project) {
+			// 		project.sequence = sequence;
+			// 		Project.create(project, function(err, projectReturned) {
+			// 			if (err) {
+			// 				console.log(err);
+			// 			} else {
+			// 				console.log("Saved project " + projectReturned.name + " to " + sequence.name);
+			// 			}
+			// 		});
+			// 	});
+			// }); // end SEQUENCE create
 		}); // end PROJECT remove
 	}); // end SEQUENCE remove
 	

@@ -97,6 +97,15 @@ router.post('/', function(req, res) {
 router.get('/download/:id/:documentation', function(req, res) {
 	var path = __dirname + '/../assets/project-files/' + req.params.id + '/' + req.params.documentation;
 	res.download(path);
+
+	Project.findById(req.params.id, function(err, project) {
+		if (err) {
+			console.log(err);
+		} else {
+			project.downloadCount++;
+			project.save();
+		}
+	})
 });
 
 /* SHOW */
