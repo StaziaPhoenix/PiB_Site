@@ -13,7 +13,7 @@
 					<!-- NAME -->
 					<div class='column form-group'>
 						<label class='form-label' for='name'>Name</label>
-						<input class='form-input' type='text' id='name' name='project[name]' placeholder='Binary Clock'>
+						<input class='form-input' type='text' id='name' name='project[name]' placeholder='Binary Clock' required>
 					</div>
 
 					<!-- CREATORS -->
@@ -25,20 +25,14 @@
 								</div>
 							</div>
 						</label>
-						<input class='form-input' type='text' id='creators' name='project[creators]' placeholder='MrSwirlyEyes, Stitch'>
+						<input class='form-input' type='text' id='creators' name='project[creators]' placeholder='MrSwirlyEyes, Stitch' required>
 					</div>
 				</div>
 
 				<!-- MAIN IMAGE -->
 				<div class='form-group'>
-					<label class='form-label popover popover-right' for='main-image'>Main Image (URL)
-						<div class='popover-container'>
-							<div class='card'>
-								<div class='card-body'>All of our project images should be public on instagram or facebook - go grab their links and we'll use them here.</div>
-							</div>
-						</div>
-					</label>
-					<input class='form-input' type='file' id='main-image' name='mainImage'>
+					<label class='form-label' for='main-image'>Main Image</label>
+					<input class='form-input' type='file' id='main-image' name='mainImage' required>
 				</div>
 
 				<!-- OTHER MEDIA -->
@@ -47,13 +41,13 @@
 				<!-- HOOK -->
 				<div class='form-group'>
 					<label class='form-label' for='hook'>Hook<br><small>This is a <em>short</em> description of the project. Less than 150 characters please.</small></label>
-					<input class='form-input' type='text' id='hook' name='project[hook]' placeholder="It's one thing to own a binary clock. It's another level of nerd to build one." maxlength='150'>
+					<input class='form-input' type='text' id='hook' name='project[hook]' placeholder="It's one thing to own a binary clock. It's another level of nerd to build one." maxlength='150' required>
 				</div>
 
 				<!-- FULL DESCRIPTION -->
 				<div class='form-group'>
 					<label class='form-label' for='description'>Description<br><small>This is the full description. No length limit (though more than one paragraph may be excessive). Talk about what the final product is, what they'll learn. Think about how you'd talk about the project if you were presenting it at an interview.</small></label>
-					<textarea class='form-input' id='description' name='project[description]' placeholder='Spicy jalapeno bacon ipsum dolor amet laborum tenderloin shankle dolor lorem pancetta consectetur id prosciutto pastrami. Dolor capicola magna fugiat, laboris culpa biltong pariatur minim nisi. Nisi incididunt consectetur, strip steak ex dolore ullamco biltong veniam swine sed fatback. Doner picanha andouille tongue veniam tail meatball salami shankle. Sirloin laboris dolore consequat, in chicken ball tip short loin officia salami mollit magna prosciutto. Burgdoggen pork anim ham hock pork belly. Laborum id kielbasa, fugiat aliquip meatloaf cupidatat ullamco et pork kevin ham.' rows='8'></textarea>
+					<textarea class='form-input' id='description' name='project[description]' placeholder='Spicy jalapeno bacon ipsum dolor amet laborum tenderloin shankle dolor lorem pancetta consectetur id prosciutto pastrami. Dolor capicola magna fugiat, laboris culpa biltong pariatur minim nisi. Nisi incididunt consectetur, strip steak ex dolore ullamco biltong veniam swine sed fatback. Doner picanha andouille tongue veniam tail meatball salami shankle. Sirloin laboris dolore consequat, in chicken ball tip short loin officia salami mollit magna prosciutto. Burgdoggen pork anim ham hock pork belly. Laborum id kielbasa, fugiat aliquip meatloaf cupidatat ullamco et pork kevin ham.' rows='8' required></textarea>
 				</div>
 
 				<!-- SKILLS LEARNED AND TAGS ROW -->
@@ -72,7 +66,7 @@
 							<div class='panel-body' id='skill-list'></div>
 							<div class='panel-footer'></div>
 						</div>
-						<input type='text' name='skillsLearned' id='skills-learned' hidden>
+						<input type='text' name='skillsLearned' id='skills-learned' hidden required>
 					</div>
 
 					<!-- TAGS -->
@@ -91,6 +85,9 @@
 								<span class='chip c-hand' onclick='selectTag(this)'><span>EagleCAD</span></span>
 								<span class='chip c-hand' onclick='selectTag(this)'><span>3D Printer</span></span>
 								<span class='chip c-hand' onclick='selectTag(this)'><span>Laser Cutter</span></span>
+								<% tags.forEach(function (tag) { %>
+									<span class='chip c-hand' onclick='selectTag(this)'><span><%= tag.name %></span></span>
+								<% }); %>
 							</div>
 							<div class='panel-footer input-group'>
 								<input type='text' class='form-input' id='new-tag-input' onkeyup='checkEnter_Tag(event, this)'>
@@ -137,38 +134,29 @@
 
 						<div class='form-group'>
 							<label class='form-label' for='documentation'>Documentation</label>
-							<input class='form-input' type='file' id='documentation' name='documentation'>
+							<input class='form-input' type='file' id='documentation' name='documentation' required>
 						</div>
 					</div>
 
 					<!-- SEQUENCE -->
 					<div class='column form-group'>
-						<label class='form-label' for='sequence'>Sequence</label>
-						<div class='panel' id='tag-panel'>
-							<div class='panel-header'>
-								<div class='has-icon-left'>
-									<input class='form-input' type='text' name='newSequence' placeholder='New Sequence'>
-									<i class="form-icon icon icon-plus"></i>
+						<label class='form-label popover popover-right' for='sequence'>Sequence
+							<div class='popover-container'>
+								<div class='card'>
+									<div class='card-body'>As you type, select from the existing sequences. If you are creating a new sequence, simply ignore the suggestions and we'll create the sequence with this project.</div>
 								</div>
 							</div>
+						</label>
 
-							<div class='divider text-center' data-content='OR'></div>
-
-							<div class='panel-body'>
-								<input class='form-input' list='sequences' placeholder='Add to an existing sequence' name='project[sequence]'>
-								  <datalist id='sequences'>
-									<% sequences.forEach(function (sequence) { %>
-										<option value='<%= sequence.name %>'>
-									<% }) %>
-								  </datalist> 
-							</div>
-
-							<div class='panel-footer'></div>
-
-						</div> <!-- END PANEL -->
+						<input class='form-input' list='sequences' placeholder='Sequence name' name='project[sequence]' id='sequence' required>
+						<datalist id='sequences'>
+							<% sequences.forEach(function (sequence) { %>
+								<option value='<%= sequence.name %>'>
+							<% }) %>
+						</datalist> 
 					</div>
 				</div>
-
+				<br>
 				<input type='button' class='btn btn-primary' value='Add Project' onclick="_submit()">
 			</form>
 		</div>

@@ -23,9 +23,16 @@ router.get('/new', function(req, res) {
 	Sequence.find({}, function(err, sequences) {
 		if (err) {
 			console.log(err);
-			redirect('back');
+			res.redirect('back');
 		} else {
-			res.render('projects/new', {sequences: sequences});
+			Tag.find({}, function(err, tags) {
+				if (err) {
+					console.log(err);
+					res.redirect('back');
+				} else {
+					res.render('projects/new', {sequences: sequences, tags: tags});
+				}
+			});
 		}
 	});
 });
@@ -37,7 +44,7 @@ router.post('/', function(req, res) {
 	var newTags = req.body.newTags.split('|');
 	if (newTags.length > 1 || (newTags.length === 1 && newTags[0] != '')) { // check for empty
 		newTags.forEach(function(tag) {
-			Tag.create({value: tag}, function (err, createdTag) {
+			Tag.create({name: tag}, function (err, createdTag) {
 				if (err) {
 					// TODO Error handling o.o
 					console.log(err);
