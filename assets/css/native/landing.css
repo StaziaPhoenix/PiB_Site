@@ -1,6 +1,8 @@
 /******** OVERRIDE NAVBAR STYLING FOR LANDING PAGE ONLY ********/
 .navbar {
+	position: absolute;
 	background: transparent;
+	overflow-x: hidden;
 }
 
 .navbar .btn-link, .navbar-brand {
